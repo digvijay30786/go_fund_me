@@ -55,15 +55,15 @@ function LetsStart() {
         </div>
     )
 }
-
-function SetTargetForm() {
-    const WarningP = styled.p`
+const WarningP = styled.p`
         background-color:${({ para })=>para === 'warning' ? 'rgb(251,248,246)' : 'white'};
         padding:10px;
         border-radius:5px;
         font-size:14px;
         margin-bottom : ${({ para })=> para === 'warning' ? '30px' : '10px'};
-    `
+`
+function SetTargetForm() {
+    
     return (
         <div>
             <h2>Set your fundraising target</h2>
@@ -145,6 +145,20 @@ function TellYourStory() {
         </form>
     </div>
 }
+
+function FundraiserReady() {
+    return (
+        <div>
+            <h2>Your fundraiser is ready.<br />
+                Let's startraising donations !    
+            </h2>
+            <WarningP para='warning'>We'll remind you to set up withdrawals once you have got your first donation.</WarningP>
+            <form>
+                <button>Next</button>
+            </form>
+        </div>
+    )
+}
 export function FillingForm() {
     return (
         <>
@@ -152,9 +166,10 @@ export function FillingForm() {
             <div className={styles.center}>
                 <StepsBar />
                 {/* <LetsStart />  */}
-                 {/* <SetTargetForm/> */}
+                {/* <SetTargetForm/> */}
                 {/* <TellYourStory/> */}
-                <AddPhoto/>
+                {/* <AddPhoto /> */}
+                <FundraiserReady/>
             </div>
         </>
     )

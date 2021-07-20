@@ -1,0 +1,38 @@
+{
+  "signupData": [
+    {
+      "": "12345",
+      "id": 1
+    },
+    {
+      "": "12345",
+      "first-name": "rajput",
+      "last-name": "rahul",
+      "email-address": "rahul@media.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "first-name": "Rahul ",
+      "last-name": "rajput",
+      "email-address": "rahulrajput7358@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "": "12345",
+      "id": 4
+    },
+    {
+      "": "12345",
+      "id": 5
+    },
+    {
+      "first-name": "Rahul ",
+      "last-name": "rajput",
+      "email-address": "rahulrajput7358@gmail.com",
+      "password": "12345",
+      "id": 6
+    }
+  ]
+}

@@ -3,8 +3,7 @@ import styles from './SignupCss.module.css'
 
 
 
-export function Navbar() {
-    // const StyledSvg = styled. 
+export function Navbar() { 
     return <header className={styles.header}>
         <nav>
             <div className={styles.svgCont}>

@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import { Signup } from './components/Signup'
 import { FillingForm } from './components/FillingForm/FillingForm';
-import { Navbar } from './components/NavBar'
+import { useState } from 'react';
+
 function App() {
+  const [isSignup, setIsSignup] = useState(false);
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      {/* <Signup /> */}
-      <FillingForm/>
+      {isSignup ? <FillingForm/> : <Signup setIsSignup={setIsSignup}/>}
     </div>
   );
 }
