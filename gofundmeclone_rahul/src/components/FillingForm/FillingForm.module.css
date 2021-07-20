@@ -1,0 +1,46 @@
+.center {
+  width: 30%;
+  margin: auto;
+  margin-top: 50px;
+}
+.stepsBar {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.stepsProgressCont {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.stepsProgressCont div {
+  margin-right: 10px;
+  width: 100px;
+  height: 6px;
+  background-color: rgb(2, 169, 92);
+}
+.center form {
+  margin-top: 20px;
+}
+
+.center form label {
+  line-height: 30px;
+}
+.center form input,
+.center form select,
+.center form button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(184, 179, 179, 0.808);
+  font-size: 17px;
+}
+.center form button {
+  background-color: rgb(2, 169, 92);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
