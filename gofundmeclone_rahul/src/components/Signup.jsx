@@ -31,7 +31,7 @@ export function Signup({setIsSignup}) {
     return <>
         <Navbar />
         <div className={styles.signup}>
-            <div class={styles.signupHeader}>
+            <div className={styles.signupHeader}>
                 <h1>Sign up</h1>
             </div>
             <div className={styles.formCont}>

@@ -1,15 +1,17 @@
 {
   "signupData": [
     {
-      "": "12345",
+      "first-name": "Rahul ",
+      "last-name": "rajput",
+      "email-address": "rahulrajput7358@gmail.com",
+      "password": "12345",
       "id": 1
     },
     {
-      "": "12345",
-      "first-name": "rajput",
-      "last-name": "rahul",
-      "email-address": "rahul@media.com",
-      "password": "12345",
+      "first-name": "Rahul ",
+      "last-name": "Rajput",
+      "email-address": "rahulrajput7358@gmail.com",
+      "password": "rahul@3105",
       "id": 2
     },
     {
@@ -20,19 +22,59 @@
       "id": 3
     },
     {
-      "": "12345",
+      "first-name": "Rahul ",
+      "last-name": "Rajput",
+      "email-address": "rahulrajput7358@gmail.com",
       "id": 4
     },
     {
-      "": "12345",
       "id": 5
+    }
+  ],
+  "letsStartInfo": [
+    {
+      "country": "CA",
+      "postcode": "924 95 - Ammarnäs, Västerbottens län",
+      "fund-reason": "Weddings,Honeymoons",
+      "id": 1
     },
     {
-      "first-name": "Rahul ",
-      "last-name": "rajput",
-      "email-address": "rahulrajput7358@gmail.com",
-      "password": "12345",
-      "id": 6
+      "country": "NO",
+      "postcode": "441 20 - Alingsås, Västra Götal län",
+      "fund-reason": "Weddings,Honeymoons",
+      "id": 2
+    },
+    {
+      "postcode": "441 20 - Alingsås, Västra Götal län",
+      "id": 3
+    }
+  ],
+  "target-amount": [
+    {
+      "targetMoney": "1000",
+      "id": 1
+    },
+    {
+      "targetMoney": "1000",
+      "id": 2
+    },
+    {
+      "targetMoney": "1000",
+      "id": 3
+    },
+    {
+      "targetMoney": "1000",
+      "id": 4
+    }
+  ],
+  "fundraiser-image": [
+    {
+      "img": "blob:http://localhost:3000/925bb859-18f2-460d-a990-f76f1f8cdfed",
+      "id": 1
+    },
+    {
+      "img": "blob:http://localhost:3000/1494e410-4297-459c-9129-6deb9ab3d98b",
+      "id": 2
     }
   ]
 }

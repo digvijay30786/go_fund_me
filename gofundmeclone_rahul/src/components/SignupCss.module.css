@@ -21,7 +21,8 @@
   padding: 0 100px;
   align-items: center;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .svgCont > svg {
