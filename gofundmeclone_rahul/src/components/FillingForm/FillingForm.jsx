@@ -305,21 +305,43 @@ function AddPhoto({setStepCount }) {
     )
 }
 
-function TellYourStory() {
+function TellYourStory({setStepCount}) {
+    const [story, setStory] = useState();
+    const updateStory = (e) => {
+        let { name, value } = e.target;
+        let payload = {
+            ...story,
+            [name] : value
+        }
+        setStory(payload);
+    }
+    function validateStory() {
+        return true;
+    }
+    const postStory = () => {
+        if (validateStory()) {
+            axios.post('http://localhost:3001/user-story', story ).then((res) => {
+                setStepCount(5);
+            }).catch((err) => {
+                console.log(err);
+            })  
+        }
+        console.log('yo')
+    }
     return <div>
         <h2>Tell your story</h2>
-        <form>
+        <form onSubmit = {(e) => e.preventDefault()}>
             
             <label htmlFor="title">
                 What is your fundraising title?
-                <input type="text" name="title" placeholder= 'e.g.Help Sarah Rebuild Her Home'/>
+                <input  onChange = {updateStory} type="text" name="title" placeholder= 'e.g.Help Sarah Rebuild Her Home'/>
             </label>
             <label htmlFor="title">
                 Why are you fundraising?
-                <input type="text" name="" placeholder = 'e.g. Hi there, my name is Jane and i am fundraising for' />
+                <input onChange = {updateStory} type="text" name="" placeholder = 'e.g. Hi there, my name is Jane and i am fundraising for' />
             </label>
-            <button>Preview fundraiser</button>
-            <button>Next</button>
+            <button style={{backgroundColor : 'white', border:'1px solid rgb(2, 169, 92)', color : 'rgb(2, 169, 92)'}}>Preview fundraiser</button>
+            <button onClick={postStory}>Next</button>
         </form>
     </div>
 }
@@ -332,7 +354,7 @@ function FundraiserReady() {
             <VerticalLinearStepper/>
             <WarningP para='warning'>We'll remind you to set up withdrawals once you have got your first donation.</WarningP>
             <form>
-                <button>Next</button>
+                <button >Next</button>
             </form>
         </div>
     )
@@ -454,7 +476,7 @@ const Overlay = styled.div`
 
 
 export function FillingForm() {
-    const [stepCount, setStepCount] = useState(5);
+    const [stepCount, setStepCount] = useState(1);
     const [postCodeModal, setPostCodeModal] = useState(false);
     const [letsStartInfo, setLetsStartInfo] = useState();
     console.log(letsStartInfo)
@@ -463,7 +485,7 @@ export function FillingForm() {
             <StepsNavBar />
             <div className={styles.center}>
                 <StepsBar stepCount={stepCount} />
-                {stepCount === 1 ? <LetsStart setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={letsStartInfo} setStepCount={setStepCount} /> : stepCount === 2 ? <SetTargetForm setStepCount={ setStepCount }/> : stepCount === 3 ? <AddPhoto setStepCount = { setStepCount }/> : stepCount === 4 ? <TellYourStory/> : stepCount === 5 ?<FundraiserReady/>: null}
+                {stepCount === 1 ? <LetsStart setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={letsStartInfo} setStepCount={setStepCount} /> : stepCount === 2 ? <SetTargetForm setStepCount={ setStepCount }/> : stepCount === 3 ? <AddPhoto setStepCount = { setStepCount }/> : stepCount === 4 ? <TellYourStory setStepCount = { setStepCount }/> : stepCount === 5 ? <FundraiserReady/>: null}
             </div>
             {postCodeModal &&
                 <Overlay>
@@ -481,9 +503,7 @@ export function FillingForm() {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%"
-    },
-    
-
+    },    
 }));
 
 function getSteps() {
@@ -504,8 +524,7 @@ export default function VerticalLinearStepper() {
     const StyledStepLabel = styled(StepLabel)`
         .MuiStepIcon-active {
             color: rgb(2, 169, 92) !important; 
-        }
-        
+        }    
     
     `;
   return (

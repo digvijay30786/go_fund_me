@@ -2,23 +2,15 @@
   "signupData": [
     {
       "first-name": "Rahul ",
-      "last-name": "rajput",
+      "last-name": "Rajput",
       "email-address": "rahulrajput7358@gmail.com",
       "password": "12345",
       "id": 1
     },
     {
-      "first-name": "Rahul ",
-      "last-name": "Rajput",
-      "email-address": "rahulrajput7358@gmail.com",
-      "password": "rahul@3105",
       "id": 2
     },
     {
-      "first-name": "Rahul ",
-      "last-name": "rajput",
-      "email-address": "rahulrajput7358@gmail.com",
-      "password": "12345",
       "id": 3
     },
     {
@@ -29,24 +21,33 @@
     },
     {
       "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "first-name": "Rahul ",
+      "last-name": "rajput",
+      "email-address": "rahulrajput7358@gmail.com",
+      "password": "12345",
+      "id": 7
     }
   ],
   "letsStartInfo": [
     {
       "country": "CA",
-      "postcode": "924 95 - Ammarnäs, Västerbottens län",
+      "postcode": "441 20 - Alingsås, Västra Götal län",
       "fund-reason": "Weddings,Honeymoons",
       "id": 1
     },
     {
-      "country": "NO",
-      "postcode": "441 20 - Alingsås, Västra Götal län",
-      "fund-reason": "Weddings,Honeymoons",
       "id": 2
     },
     {
-      "postcode": "441 20 - Alingsås, Västra Götal län",
       "id": 3
+    },
+    {
+      "id": 4
     }
   ],
   "target-amount": [
@@ -59,21 +60,37 @@
       "id": 2
     },
     {
-      "targetMoney": "1000",
       "id": 3
     },
     {
-      "targetMoney": "1000",
       "id": 4
     }
   ],
   "fundraiser-image": [
     {
-      "img": "blob:http://localhost:3000/925bb859-18f2-460d-a990-f76f1f8cdfed",
+      "img": "blob:http://localhost:3000/89e2f27c-f14c-457c-9174-23ac5f128126",
       "id": 1
     },
     {
-      "img": "blob:http://localhost:3000/1494e410-4297-459c-9129-6deb9ab3d98b",
+      "img": "blob:http://localhost:3000/ef2c24f3-418e-4c76-a0ed-e619510fd66e",
+      "id": 2
+    },
+    {
+      "img": "blob:http://localhost:3000/0cc7c9e4-4744-49af-9a5b-39ac2673b96d",
+      "id": 3
+    },
+    {
+      "img": "blob:http://localhost:3000/eeccde8e-bd00-4a4c-bd56-2fa16767f90a",
+      "id": 4
+    }
+  ],
+  "user-story": [
+    {
+      "title": "baba ka dhaba",
+      "": "wtf",
+      "id": 1
+    },
+    {
       "id": 2
     }
   ]
