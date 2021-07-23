@@ -49,21 +49,8 @@
   width: 70%;
   margin: auto;
 }
-.signup input {
-  display: block;
-  width: 100%;
-  height: 45px;
-  margin: 10px 0;
-  border: 1px solid rgba(184, 173, 173, 0.568);
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 17px;
-}
 
-.signup input::placeholder {
-  color: rgba(161, 153, 153, 0.747);
-}
-.signup form button {
+.signup form button[class="next"] {
   width: 100px;
   height: 40px;
   margin: auto;
@@ -77,7 +64,7 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.signup form button:hover {
+.signup form button[class="next"]:hover {
   transform: scale(1.1);
   transition: 0.5s;
 }

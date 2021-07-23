@@ -40,12 +40,13 @@
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid rgba(184, 179, 179, 0.808);
-  font-size: 17px;
+  font-size: 15px;
   padding: 0 15px;
 }
 .center form button {
   background-color: rgb(2, 169, 92);
   color: white;
+  font-size: 17px;
   border: none;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -73,4 +74,14 @@
 }
 .hide {
   display: none !important;
+}
+/* ////////////////for add story textarea  */
+.addStoryTextArea {
+  resize: none;
+  padding: 10px;
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(184, 179, 179, 0.808);
+  border-radius: 5px;
+  font-size: 15px;
 }

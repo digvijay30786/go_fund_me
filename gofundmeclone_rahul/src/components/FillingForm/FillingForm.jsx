@@ -18,6 +18,7 @@ import {BiEuro} from 'react-icons/bi'
 import axios from 'axios';
 import { useDropzone } from "react-dropzone";
 
+import { SimpleBackdrop } from '../Loading';
 function StepsNavBar() {
     const StyledNav = styled.nav`
         height:10vh;
@@ -53,7 +54,7 @@ function StepsBar({ stepCount }) {
         </div>
     )
 }
-function LetsStart({ setPostCodeModal, letsStartInfo, setLetsStartInfo ,setStepCount}) {
+function LetsStart({ setPostCodeModal, letsStartInfo, setLetsStartInfo, setStepCount , setStartLoading}) {
     const updateLetsStartInfo = (e) => {
         const { name, value } = e.target;
         let payload = {
@@ -66,9 +67,11 @@ function LetsStart({ setPostCodeModal, letsStartInfo, setLetsStartInfo ,setStepC
         return true;
     }
     const postLetsStartInfo = (e) => {
+        setStartLoading(true);
         e.preventDefault();
         if (validateLetsStartInfo()) {
             axios.post('http://localhost:3001/letsStartInfo', letsStartInfo).then((res) => {
+                setStartLoading(false);
                 setStepCount(2)
             }).catch((err) => {
                 console.log(err);
@@ -141,15 +144,17 @@ const WarningP = styled.p`
         font-size:14px;
         margin-bottom : ${({ para })=> para === 'warning' ? '30px' : '10px'};
 `
-function SetTargetForm({setStepCount}) {
+function SetTargetForm({setStepCount , setStartLoading}) {
     const [targetMoney, setTargetMoney] = useState();
     function amountValid() {
         return true;
     }
     const postTargetMoney = (e) => {
+        setStartLoading(true)
         e.preventDefault();
         if (amountValid()) {
             axios.post('http://localhost:3001/target-amount',{targetMoney : targetMoney}).then((res) => {
+                setStartLoading(false);
                 setStepCount(3);
             }).catch((err) => {
                 console.log(err);
@@ -184,10 +189,15 @@ const StyledDropZone = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;
 const StyledPlus = styled.p`
-        font-size:38px;
-    `
+    font-size:38px;
+`
 const OrLine = styled.div`
           border-bottom:0.1px solid rgba(204, 200, 190, 0.76);
           height:10px;
@@ -206,7 +216,7 @@ const OrLine = styled.div`
         }
 `
 
-function AddPhoto({setStepCount }) {
+function AddPhoto({setStepCount , setStartLoading}) {
     const [files, setFiles] = useState([]);
     const [nextBtn, setNextBtn] = useState(false);
     const { getRootProps, getInputProps } = useDropzone({
@@ -235,10 +245,12 @@ function AddPhoto({setStepCount }) {
         }, [files]);
     
     const postImage = (e) => {
+        setStartLoading(true)
         e.preventDefault();
         console.log(files);
         if (files.length > 0 ) {
             axios.post('http://localhost:3001/fundraiser-image', { img: files[0].preview }).then((res) => {
+                setStartLoading(false);
                 setStepCount(4);
             }).catch((err) => {
                 console.log(err);
@@ -305,7 +317,7 @@ function AddPhoto({setStepCount }) {
     )
 }
 
-function TellYourStory({setStepCount}) {
+function TellYourStory({setStepCount ,setStartLoading}) {
     const [story, setStory] = useState();
     const updateStory = (e) => {
         let { name, value } = e.target;
@@ -319,14 +331,15 @@ function TellYourStory({setStepCount}) {
         return true;
     }
     const postStory = () => {
+        setStartLoading(true)
         if (validateStory()) {
             axios.post('http://localhost:3001/user-story', story ).then((res) => {
+                setStartLoading(false)
                 setStepCount(5);
             }).catch((err) => {
                 console.log(err);
             })  
         }
-        console.log('yo')
     }
     return <div>
         <h2>Tell your story</h2>
@@ -338,14 +351,14 @@ function TellYourStory({setStepCount}) {
             </label>
             <label htmlFor="title">
                 Why are you fundraising?
-                <input onChange = {updateStory} type="text" name="" placeholder = 'e.g. Hi there, my name is Jane and i am fundraising for' />
+                <textarea className={ styles.addStoryTextArea}onChange = {updateStory} type="text" name="story" placeholder = 'e.g. Hi there, my name is Jane and i am fundraising for' />
             </label>
             <button style={{backgroundColor : 'white', border:'1px solid rgb(2, 169, 92)', color : 'rgb(2, 169, 92)'}}>Preview fundraiser</button>
             <button onClick={postStory}>Next</button>
         </form>
     </div>
 }
-function FundraiserReady() {
+function FundraiserReady({setFillingFormDone}) {
     return (
         <div>
             <h2>Your fundraiser is ready.<br />
@@ -353,8 +366,8 @@ function FundraiserReady() {
             </h2>
             <VerticalLinearStepper/>
             <WarningP para='warning'>We'll remind you to set up withdrawals once you have got your first donation.</WarningP>
-            <form>
-                <button >Next</button>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <button onClick = {()=>setFillingFormDone(true)}>Next</button>
             </form>
         </div>
     )
@@ -475,23 +488,29 @@ const Overlay = styled.div`
 `;
 
 
-export function FillingForm() {
+export function FillingForm({setFillingForm}) {
     const [stepCount, setStepCount] = useState(1);
     const [postCodeModal, setPostCodeModal] = useState(false);
     const [letsStartInfo, setLetsStartInfo] = useState();
-    console.log(letsStartInfo)
+    const [startLoading, setStartLoading] = useState(false);
+    const [isFillingFormDone, setFillingFormDone] = useState(false);
+    useEffect(() => {
+        isFillingFormDone && setFillingForm(true);
+    },[isFillingFormDone, setFillingForm])
+    
     return (
         <>
             <StepsNavBar />
             <div className={styles.center}>
                 <StepsBar stepCount={stepCount} />
-                {stepCount === 1 ? <LetsStart setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={letsStartInfo} setStepCount={setStepCount} /> : stepCount === 2 ? <SetTargetForm setStepCount={ setStepCount }/> : stepCount === 3 ? <AddPhoto setStepCount = { setStepCount }/> : stepCount === 4 ? <TellYourStory setStepCount = { setStepCount }/> : stepCount === 5 ? <FundraiserReady/>: null}
+                {stepCount === 1 ? <LetsStart setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={letsStartInfo} setStepCount={setStepCount} setStartLoading={setStartLoading} /> : stepCount === 2 ? <SetTargetForm setStartLoading={setStartLoading} setStepCount={setStepCount} /> : stepCount === 3 ? <AddPhoto setStartLoading={setStartLoading} setStepCount={setStepCount} /> : stepCount === 4 ? <TellYourStory setStartLoading={setStartLoading} setStepCount={setStepCount} /> : stepCount === 5 ? <FundraiserReady setStartLoading={setStartLoading} setFillingFormDone={ setFillingFormDone }/>: null}
             </div>
             {postCodeModal &&
                 <Overlay>
                 <PostCodeModal setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={ letsStartInfo }/>
                 </Overlay>
             }
+            <SimpleBackdrop handleClose = { startLoading }/>
         </>
     )
 }
