@@ -15,8 +15,8 @@ import { ManageFundLanding } from './components/ManageFundPage.jsx/ManageFundLan
 
 
 function App() {
-  const [isSignup, setIsSignup] = useState(false);
-  const [isFillingFormDone , setFillingFormDone] = useState(false);
+  const [isSignup, setIsSignup] = useState(true);
+  const [isFillingFormDone , setFillingFormDone] = useState(true);
   return (
     <div className="App">
       {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm  setFillingForm={ setFillingFormDone }/> : <Signup setIsSignup={setIsSignup}/>}

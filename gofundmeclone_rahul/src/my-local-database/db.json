@@ -44,6 +44,13 @@
       "emailAddress": "rahulrajput7358@gmail.com",
       "password": "123456",
       "id": 11
+    },
+    {
+      "firstName": "Rajput",
+      "lastName": "rahul",
+      "emailAddress": "rahulrajputskdjfksdjf",
+      "password": "12345",
+      "id": 12
     }
   ],
   "letsStartInfo": [
@@ -77,6 +84,12 @@
       "postcode": "441 17 - Alingsås, Västra Götal län",
       "fund-reason": "Weddings,Honeymoons",
       "id": 8
+    },
+    {
+      "country": "US",
+      "postcode": "441 17 - Alingsås, Västra Götal län",
+      "fund-reason": "Weddings,Honeymoons",
+      "id": 9
     }
   ],
   "target-amount": [
@@ -107,6 +120,10 @@
     {
       "targetMoney": "1000",
       "id": 8
+    },
+    {
+      "targetMoney": "1000",
+      "id": 9
     }
   ],
   "fundraiser-image": [
@@ -141,6 +158,10 @@
     {
       "img": "blob:http://localhost:3000/411cb51f-33d6-43fb-94f2-1bd60c1526d6",
       "id": 8
+    },
+    {
+      "img": "blob:http://localhost:3000/f651e5e7-d97a-4172-96f4-ac6ab910336e",
+      "id": 9
     }
   ],
   "user-story": [
@@ -167,6 +188,11 @@
       "title": "rahul",
       "story": "bhosdi k ",
       "id": 6
+    },
+    {
+      "title": "rahul",
+      "story": "fdfdfdf",
+      "id": 7
     }
   ],
   "update-message": [

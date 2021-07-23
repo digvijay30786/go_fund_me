@@ -8,14 +8,14 @@ import styled from "styled-components";
 import axios from "axios";
 import styles from "./style.module.css";
 // importing icons
-import { BsPencil } from "react-icons/bs";
+import { BsPencil ,BsThreeDotsVertical ,BsUpload} from "react-icons/bs";
 import {
   AiOutlineEye,
   AiOutlineBank,
   AiOutlineMail,
   AiOutlineMobile,
 } from "react-icons/ai";
-import { BsUpload } from "react-icons/bs";
+
 import { GoDiffAdded } from "react-icons/go";
 ////////////////////////
 import { FundraiserPayment } from "./FundraiserPayment";
@@ -120,7 +120,7 @@ function DonorsTab() {
   );
 }
 function TeamTab() {
-  return null;
+  return <h1>Team</h1>
 }
 
 function UpdatesTab() {
@@ -202,6 +202,7 @@ function UpdatesTab() {
                   <br />
                   This was shared with your donors
                 </div>
+                <BsThreeDotsVertical/>
               </UserUpdateMessage>
             );
           })}
@@ -242,14 +243,28 @@ function UpdateArea() {
   const [donors, setDonors] = useState(false);
   const [team, setTeam] = useState(false);
   const [updates, setUpdates] = useState(true);
+  function switc (para) {
+    if (para === 'Donors') {
+      setDonors(true);
+      setTeam(false);
+      setUpdates(false);
+    } else if (para === 'team') {
+      setDonors(false);
+      setTeam(true);
+      setUpdates(false);
+    }else if (para === 'updates') {
+      setDonors(false);
+      setTeam(false);
+      setUpdates(true);
+    }
+  }
   return (
     <>
       <StyledUpdateArea>
         <div className="options">
-          <h4>Donors</h4>
-          <h4>Team</h4>
-          <h4>Updates</h4>
-          {/* <button> Post an update </button> */}
+          <h4 onClick = {()=>switc('Donors')} className = {donors && 'active'}>Donors</h4>
+          <h4 onClick = {()=>switc('team')} className = {team && 'active'}>Team</h4>
+          <h4 onClick = {()=>switc('updates') } className = {updates && 'active'} >Updates</h4>
         </div>
         <div>
           {donors ? <DonorsTab /> : team ? <TeamTab /> : <UpdatesTab />}
@@ -262,9 +277,9 @@ function UpdateArea() {
 export function ManageFundLanding() {
   return (
     <>
-      <TopView />
-      <UpdateArea />
-      {/* <FundraiserPayment/>         */}
+      {/* <TopView /> */}
+      {/* <UpdateArea /> */}
+      <FundraiserPayment/>        
     </>
   );
 }
@@ -418,8 +433,11 @@ const StyledUpdateArea = styled.div`
     height: 30px;
     h4 {
       margin-right: 20px;
-      border-bottom: 3px solid rgb(2, 169, 92);
+        border-bottom: 3px solid gray;
       cursor: pointer;
+    }
+    .active {
+      border-bottom: 3px solid rgb(2, 169, 92);
     }
   }
 `;
@@ -519,5 +537,13 @@ const UserUpdateMessage = styled.div`
     right: 20%;
     font-weight: 600;
     color: gray;
+  };
+  & > svg {
+    // border:1px solid lime;
+    position:absolute;
+    right:0;
+    font-size:20px;
+    color: gray;
+    cursor:pointer;
   }
 `;
