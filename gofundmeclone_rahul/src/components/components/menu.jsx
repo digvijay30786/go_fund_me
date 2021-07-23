@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 export default function Menu() {
   const Header = styled.div`
     left: 0;
@@ -17,10 +18,16 @@ export default function Menu() {
     background-color: white;
     z-index:1;
     nav {
+      
+      .link{
+        text-decoration:none;
+        color:black;
+      }
       .icon {
         display: flex;
         align-items: center;
         column-gap: 8px;
+        
       }
     }
   `;
@@ -155,7 +162,7 @@ export default function Menu() {
       <ImgDiv>
         <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" />
       </ImgDiv>
-      <nav>How its Work</nav>
+      <nav><Link to='/works' className="link">How its Work</Link></nav>
       <nav>Signin</nav>
       <FundmeBtn>Start a GoFundMe</FundmeBtn>
     </Header>

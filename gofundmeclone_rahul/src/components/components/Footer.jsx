@@ -6,7 +6,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
 import MailIcon from '@material-ui/icons/Mail';
-export function Footer() {
+export default function Footer() {
     //  const [text, settext] = useState(0);
 
 

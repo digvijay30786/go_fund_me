@@ -133,7 +133,6 @@ export const Modal = ({ showModal, setShowModal }) => {
             <ModalWrapper showModal={showModal}>
               <ModalContent>
                 <h1>How it Works | GoFundMe </h1>
-                <p></p>
                 <button>Start a GoFundMe</button>
               </ModalContent>
               <CloseModalButton

@@ -1,27 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import { Signup } from './components/Signup'
-import { FillingForm } from './components/FillingForm/FillingForm';
-import { useState } from 'react';
-import { ManageFundLanding } from './components/ManageFundPage.jsx/ManageFundLanding';
-
-
-
-
-
-
-
-
-
-
-function App() {
-  const [isSignup, setIsSignup] = useState(true);
-  const [isFillingFormDone , setFillingFormDone] = useState(true);
+import Main from "./components/components/main";
+import Works from './components/components/works'
+import Rahul from './components/rahul';
+import {Switch,Route} from "react-router-dom";
+export default function App() {
+  
   return (
-    <div className="App">
-      {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm  setFillingForm={ setFillingFormDone }/> : <Signup setIsSignup={setIsSignup}/>}
-    </div>
+    <Switch>
+      <Route exact path='/' component={Main} />
+      <Route exact path='/works' component={Works} />
+      <Route path='/rahul' component={Rahul} />
+    </Switch>
   );
 }
-
-export default App;
