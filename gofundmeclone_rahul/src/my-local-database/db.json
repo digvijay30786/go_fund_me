@@ -1,260 +1,60 @@
 {
-  "signupData": [
-    {
-      "first-name": "Rahul ",
-      "last-name": "rajput",
-      "email-address": "rahulrajput7358@gmail.com",
-      "password": "12345",
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "firstName": "rahul",
-      "lastName": "Rajput",
-      "emailAddress": "rahulrajput7358@gmail.com",
-      "password": "12345",
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
+  "users": [
     {
       "firstName": "Rahul",
-      "lastName": "Rajput",
-      "emailAddress": "rahulrajput7358@gmail.com",
-      "password": "123456",
-      "id": 11
-    },
-    {
-      "firstName": "Rajput",
-      "lastName": "rahul",
-      "emailAddress": "rahulrajputskdjfksdjf",
-      "password": "12345",
-      "id": 12
-    }
-  ],
-  "letsStartInfo": [
-    {
-      "country": "GB",
-      "postcode": "441 20 - Alingsås, Västra Götal län",
-      "fund-reason": "Weddings,Honeymoons",
-      "id": 1
-    },
-    {
-      "country": "PT",
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "country": "US",
-      "postcode": "441 17 - Alingsås, Västra Götal län",
-      "fund-reason": "Weddings,Honeymoons",
-      "id": 8
-    },
-    {
-      "country": "US",
-      "postcode": "441 17 - Alingsås, Västra Götal län",
-      "fund-reason": "Weddings,Honeymoons",
-      "id": 9
-    }
-  ],
-  "target-amount": [
-    {
-      "targetMoney": "1000",
-      "id": 1
-    },
-    {
-      "targetMoney": "1000",
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "targetMoney": "1000",
-      "id": 7
-    },
-    {
-      "targetMoney": "1000",
-      "id": 8
-    },
-    {
-      "targetMoney": "1000",
-      "id": 9
-    }
-  ],
-  "fundraiser-image": [
-    {
-      "img": "blob:http://localhost:3000/c67174bd-aab2-47c4-9dda-2f2ef318beb0",
-      "id": 1
-    },
-    {
-      "img": "blob:http://localhost:3000/e5b04bea-d15a-4023-a14a-eb123ebc5e15",
-      "id": 2
-    },
-    {
-      "img": "blob:http://localhost:3000/220f21ea-a4e4-4cd6-a5ad-bab96f4b94a5",
-      "id": 3
-    },
-    {
-      "img": "blob:http://localhost:3000/371c4c7f-f7ef-44da-a7a9-0bcf8a3801e0",
-      "id": 4
-    },
-    {
-      "img": "blob:http://localhost:3000/6db1ff76-8911-4fce-9350-4c4203ebc00a",
-      "id": 5
-    },
-    {
-      "img": "blob:http://localhost:3000/8a6b5fb6-6b8e-4742-b476-4302488aeb8a",
-      "id": 6
-    },
-    {
-      "img": "blob:http://localhost:3000/5b883b7c-3ef6-4acb-b0db-5b1cecdbb90f",
-      "id": 7
-    },
-    {
-      "img": "blob:http://localhost:3000/411cb51f-33d6-43fb-94f2-1bd60c1526d6",
-      "id": 8
-    },
-    {
-      "img": "blob:http://localhost:3000/f651e5e7-d97a-4172-96f4-ac6ab910336e",
-      "id": 9
-    }
-  ],
-  "user-story": [
-    {
-      "title": "baba ka dhaba",
-      "": "lauda lassan",
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "story": "",
-      "title": "",
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "title": "rahul",
-      "story": "bhosdi k ",
-      "id": 6
-    },
-    {
-      "title": "rahul",
-      "story": "fdfdfdf",
-      "id": 7
-    }
-  ],
-  "update-message": [
-    {
-      "message": "i am rahul i am fine now",
-      "firstname": "Rahul",
-      "lastname": "Rajput"
-    },
-    {
-      "message": "i am joginder i am also find now",
-      "firstname": "joginder",
-      "lastname": "singh"
-    },
-    {
-      "message": "i am joginder i am also find now",
-      "firstname": "Rahul",
-      "lastname": "Rajput"
-    }
-  ],
-  "curr-logged-in": {
-    "signupData": {
-      "first-name": "Rahul ",
-      "last-name": "rajput",
-      "email-address": "rahulrajput7358@gmail.com",
+      "lastName": "rampuri",
+      "emailAddress": "rahul@masai.school",
       "password": "12345",
       "id": 1
-    },
-    "letsStartInfo": {
-      "country": "GB",
-      "postcode": "441 20 - Alingsås, Västra Götal län",
-      "fund-reason": "Weddings,Honeymoons",
-      "id": 1
-    },
-    "target-amount": {
-      "targetMoney": "1000",
-      "id": 1
-    },
-    "fundraiser-image": {
-      "img": "blob:http://localhost:3000/c67174bd-aab2-47c4-9dda-2f2ef318beb0",
-      "id": 1
-    },
-    "user-story": {
+    }
+  ],
+  "currLoggedIn": {
+    "firstName": "Rahul",
+    "lastName": "rampuri",
+    "emailAddress": "rahul@masai.school",
+    "password": "12345"
+  },
+  "myAllFundraiser": [
+    {
+      "basics": {
+        "country": "GB",
+        "fund-reason": "Weddings,Honeymoons"
+      },
+      "targetMoney": "15000",
+      "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
       "title": "baba ka dhaba",
-      "": "lauda lassan",
+      "story": "halua",
+      "id": 1
+    }
+  ],
+  "myCurrFundraiser": {
+    "basics": {
+      "country": "GB",
+      "fund-reason": "Weddings,Honeymoons"
+    },
+    "targetMoney": "15000",
+    "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
+    "title": "baba ka dhaba",
+    "story": "halua"
+  },
+  "currUpdates": [
+    {
+      "message": "Hello how do u do",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
       "id": 1
     },
-    "updateMessage": [
-      {
-        "message": "i am rahul i am fine now",
-        "firstname": "Rahul",
-        "lastname": "Rajput"
-      },
-      {
-        "message": "i am joginder i am also find now",
-        "firstname": "joginder",
-        "lastname": "singh"
-      },
-      {
-        "message": "i am joginder i am also find now",
-        "firstname": "Rahul",
-        "lastname": "Rajput"
-      }
-    ]
-  }
+    {
+      "message": "i am broke nigga",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
+      "id": 2
+    },
+    {
+      "message": "Can u fuck your ass nigga",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
+      "id": 3
+    }
+  ]
 }

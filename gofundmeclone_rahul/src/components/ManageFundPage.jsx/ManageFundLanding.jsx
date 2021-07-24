@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import styles from "./style.module.css";
+import Menu from '../components/menu';
+import Footer from '../components/Footer'
 // importing icons
 import { BsPencil, BsThreeDotsVertical, BsUpload } from "react-icons/bs";
 import {
@@ -48,49 +50,62 @@ function LinearDeterminate() {
 
 ///////////////////////////////////////////////////////////////////////////
 function TopView() {
+  let [currFundraiser, setCurrFundraiser] = useState();
+  console.log(currFundraiser)
+  useEffect(() => {
+    axios.get('http://localhost:3001/myCurrFundraiser').then((res) => {
+      setCurrFundraiser(res.data);
+    }).catch((err) => {
+      console.log(err)
+    })
+
+  }, [])
+  console.log(currFundraiser)
   return (
-    <StyledTopView>
-      <div className="left">
-        <img
-          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-          alt=""
-        />
-        <div>
-          <h2>Testing</h2>
-          <div className="flexCont">
-            <p>
-              <BsPencil />
-              Edit Settings
-            </p>
-            <p>
-              <AiOutlineEye />
-              View fundraiser
-            </p>
+    <>
+      <StyledTopView>
+        <div className="left">
+          <img
+            src={currFundraiser === undefined ? 'not yet' : currFundraiser.img}
+            alt="fundraiser img"
+          />
+          <div>
+            <h2>{currFundraiser === undefined ? 'not yet' : currFundraiser.title}</h2>
+            <div className="flexCont">
+              <p>
+                <BsPencil />
+                Edit Settings
+              </p>
+              <p>
+                <AiOutlineEye />
+                View fundraiser
+              </p>
+            </div>
+            <LinearDeterminate />
+            <p>Total raised $0</p>
           </div>
-          <LinearDeterminate />
-          <p>Total raised $0</p>
-        </div>
-      </div>
-
-      <div className="right">
-        <div>
-          <IconCircleCont>
-            <BsUpload />
-          </IconCircleCont>
         </div>
 
-        <div>
-          <IconCircleCont>
-            <GoDiffAdded />
-          </IconCircleCont>
+        <div className="right">
+          <div>
+            <IconCircleCont>
+              <BsUpload />
+            </IconCircleCont>
+          </div>
+
+          <div>
+            <IconCircleCont>
+              <GoDiffAdded />
+            </IconCircleCont>
+          </div>
+          <div>
+            <IconCircleCont>
+              <AiOutlineBank />
+            </IconCircleCont>
+          </div>
         </div>
-        <div>
-          <IconCircleCont>
-            <AiOutlineBank />
-          </IconCircleCont>
-        </div>
-      </div>
-    </StyledTopView>
+      </StyledTopView>
+    </>
   );
 }
 
@@ -130,28 +145,35 @@ function UpdatesTab() {
   const [textAreaVal, setTextAreaVal] = useState();
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
+  async function fetchData() {
+    let promise1 = await axios.get("http://localhost:3001/currUpdates");
+    let promise2 = await axios.get("http://localhost:3001/currLoggedIn");
+    setUpdateMessages(promise1.data);
+    setFirstName(promise2.data.firstName);
+    setLastName(promise2.data.lastName);
+
+  }
+  
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/curr-logged-in")
-      .then(({ data }) => {
-        setUpdateMessages(data.updateMessage);
-        setFirstName(data.signupData.firstName);
-        setLastName(data.signupData.lastName);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    fetchData();
   }, []);
   function postMessage() {
+    setHandleModal(!handleModal)
     let payload = {
       message: textAreaVal,
       firstname: firstName,
       lastname: lastName,
     };
-    let payload2 = [...updateMessages, payload];
-    axios.patch('http://localhost:3001/curr-logged-in')
+    axios.post('http://localhost:3001/currUpdates',payload).then((res) => {
+      setUpdateMessages((prevMessage) => {
+        let payload1 = [...prevMessage, payload];
+        return payload1;
+      })
+    }).catch((err) => {
+      alert(err.message)
+    })
   }
-  console.log(textAreaVal);
+
   return (
     <>
       {updateMessages === undefined ? (
@@ -202,7 +224,7 @@ function UpdatesTab() {
                   <br />
                   This was shared with your donors
                 </div>
-                <BsThreeDotsVertical />
+                <BsThreeDotsVertical onClick={()=>alert('i am clicked bitch')} />
               </UserUpdateMessage>
             );
           })}
@@ -277,10 +299,13 @@ function UpdateArea() {
 export function ManageFundLanding() {
   return (
     <>
-      {/* <TopView /> */}
-      {/* <UpdateArea /> */}
-     
-      {<FundraiserPayment/>}
+
+      < Menu/>
+      <TopView />
+      <UpdateArea />
+      {/* <FundraiserPayment /> */}
+      <Footer />
+
     </>
   );
 }
@@ -289,10 +314,11 @@ export function ManageFundLanding() {
 
 const StyledTopView = styled.div`
   display: flex;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 100px 0px;
   justify-content: space-between;
   align-items: center;
   padding: 40px 150px;
+  margin-top:100px;
   .left {
     display: flex;
     min-width: 530px;
@@ -315,6 +341,8 @@ const StyledTopView = styled.div`
     justify-content: space-between;
     color: gray;
     text-decoration: underline;
+    // border:1px solid lime;
+    width:250px;
   }
   .flexCont p {
     cursor: pointer;

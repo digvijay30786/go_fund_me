@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { Rahul } from '../rahul';
 export default function Menu() {
   const Header = styled.div`
     left: 0;
@@ -49,6 +51,7 @@ export default function Menu() {
     border-radius: 8px;
     box-sizing: border-box;
     width: 160px;
+    cursor:pointer;
   `;
 
   const DropDown = styled.div`
@@ -109,7 +112,7 @@ export default function Menu() {
     <Header>
       <nav>
         <div className="icon">
-          <img src="https://imgur.com/lwx2KIM.png" width="20px" />
+          <img src="https://imgur.com/lwx2KIM.png" width="20px" alt='img' />
           Search
         </div>
       </nav>
@@ -123,6 +126,7 @@ export default function Menu() {
                 src="https://i.imgur.com/TRjqnAS.png"
                 height="16px"
                 width="16px"
+                alt='img'
               />
             </span>
             <div class="dropdown-content">
@@ -160,11 +164,11 @@ export default function Menu() {
         </DropDown>
       </nav>
       <ImgDiv>
-        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" />
+        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" alt='img' />
       </ImgDiv>
       <nav><Link to='/works' className="link">How its Work</Link></nav>
       <nav>Signin</nav>
-      <FundmeBtn>Start a GoFundMe</FundmeBtn>
+      <Link to="/rahul"><FundmeBtn>Start a GoFundMe</FundmeBtn></Link>
     </Header>
   );
 }

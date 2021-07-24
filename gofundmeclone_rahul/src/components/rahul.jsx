@@ -1,17 +1,25 @@
 import '../App.css';
 import { Signup } from './Signup'
 import { FillingForm } from './FillingForm/FillingForm';
-import { useState } from 'react';
-import { ManageFundLanding } from './ManageFundPage.jsx/ManageFundLanding';
+import { useState, useEffect } from 'react';
 
-function Rahul() {
-  const [isSignup, setIsSignup] = useState(true);
-  const [isFillingFormDone , setFillingFormDone] = useState(true);
-  return (
-    <div className="App">
-      {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm  setFillingForm={ setFillingFormDone }/> : <Signup setIsSignup={setIsSignup}/>}
-    </div>
-  );
+
+function checkUserLoggedInOrNot() {
+  return false;
 }
 
-export default Rahul;
+export function Rahul() {
+  const [isSignup, setIsSignup] = useState();
+  useEffect(() => {
+    if (checkUserLoggedInOrNot()) {
+      setIsSignup(true);
+    } else {
+      setIsSignup(false);
+    }
+  }, [])
+  return (
+    <div className="App">
+      {isSignup ? <FillingForm /> : <Signup setIsSignup={setIsSignup} />}
+    </div>
+  );
+};
