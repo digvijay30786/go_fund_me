@@ -45,21 +45,21 @@ function StepsBar({ stepCount }) {
     <div className={styles.stepsBar}>
       <p>Step {stepCount} to 5</p>
       <div className={styles.stepsProgressCont}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className={stepCount >= 1 ? styles.completed : styles.not}></div>
+        <div className={stepCount >= 2 ? styles.completed : styles.not}></div>
+        <div className={stepCount >= 3 ? styles.completed : styles.not}></div>
+        <div className={stepCount >= 4 ? styles.completed : styles.not}></div>
+        <div className={stepCount >= 5 ? styles.completed : styles.not}></div>
       </div>
     </div>
   );
 }
 function LetsStart({
-  setPostCodeModal,
   setStepCount,
   setStartLoading,
   setMyFundraiser,
 }) {
+  const [postCodeModal, setPostCodeModal] = useState(false);
   const [letsStartInfo, setLetsStartInfo] = useState();
   const updateLetsStartInfo = (e) => {
     const { name, value } = e.target;
@@ -71,18 +71,12 @@ function LetsStart({
     console.log(letsStartInfo);
   };
   function validateLetsStartInfo() {
-    return true;
+    
+      return true;
+    //   <SimpleAlerts />
   }
   const postLetsStartInfo = (e) => {
-    // setStartLoading(true);
-    // if (validateLetsStartInfo()) {
-    //     axios.post('http://localhost:3001/letsStartInfo', letsStartInfo).then((res) => {
-    //         setStartLoading(false);
-    //         setStepCount(2)
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // }
+    
     e.preventDefault();
     if (validateLetsStartInfo()) {
       setStartLoading(true);
@@ -101,93 +95,101 @@ function LetsStart({
   };
 
   return (
-    <div>
-      <h3>Let's Start with the basics</h3>
-      <form onSubmit={postLetsStartInfo}>
-        <label htmlFor="country">
-          Where do you live?
-          <select onChange={updateLetsStartInfo} name="country">
-            <option value="0" disabled>
-              Choose your country
-            </option>
-            <option value="AU">Australia</option>
-            <option value="AT">Austria</option>
-            <option value="BE">Belgium</option>
-            <option value="CA">Canada</option>
-            <option value="DK">Denmark</option>
-            <option value="FI">Finland</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-            <option value="IE">Ireland</option>
-            <option value="IT">Italy</option>
-            <option value="LU">Luxembourg</option>
-            <option value="NL">Netherlands</option>
-            <option value="NZ">New Zealand</option>
-            <option value="NO">Norway</option>
-            <option value="PT">Portugal</option>
-            <option value="ES">Spain</option>
-            <option value="SE">Sweden</option>
-            <option value="CH">Switzerland</option>
-            <option value="GB">United Kingdom</option>
-            <option value="US">United States</option>
-          </select>
-        </label>
-        <input
-          type="text"
-          name="postcode"
-          placeholder="Search for your postcode"
-          onClick={() => setPostCodeModal(true)}
-          value={letsStartInfo !== undefined ? letsStartInfo.postcode : ""}
-        />
-        <label htmlFor="fund-reason">What are you fundraising for?</label>
+    <>
+        <div>
+        <h3>Let's Start with the basics</h3>
+        <form onSubmit={postLetsStartInfo}>
+            <label htmlFor="country">
+            Where do you live?
+            <select onChange={updateLetsStartInfo} name="country">
+                <option value="0" disabled>
+                Choose your country
+                </option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="BE">Belgium</option>
+                <option value="CA">Canada</option>
+                <option value="DK">Denmark</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="IE">Ireland</option>
+                <option value="IT">Italy</option>
+                <option value="LU">Luxembourg</option>
+                <option value="NL">Netherlands</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NO">Norway</option>
+                <option value="PT">Portugal</option>
+                <option value="ES">Spain</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+            </select>
+            </label>
+            <input
+            type="text"
+            name="postcode"
+            placeholder="Search for your postcode"
+            onClick={() => setPostCodeModal(true)}
+            value={letsStartInfo !== undefined ? letsStartInfo.postcode : ""}
+            />
+            <label htmlFor="fund-reason">What are you fundraising for?</label>
 
-        <select name="fund-reason" onChange={updateLetsStartInfo}>
-          <option value="0">Choose a category</option>
-          <option value="Accidents,Emergencies">
-            Accidents &amp; Emergencies
-          </option>
-          <option value="Animals,Pets">Animals &amp; Pets</option>
-          <option value="Babies,Children,Family">
-            Babies, Children &amp; Family
-          </option>
-          <option value="Business,Entrepreneurs">
-            Business &amp; Entrepreneurs
-          </option>
-          <option value="Celebrations,Events">Celebrations &amp; Events</option>
-          <option value="Community,Neighbours">
-            Community &amp; Neighbours
-          </option>
-          <option value="Competitions,Pageants">
-            Competitions &amp; Pageants
-          </option>
-          <option value="Creative Arts,Music,Film">
-            Creative Arts, Music &amp; Film
-          </option>
-          <option value="Dreams,HopesNWishes">
-            Dreams, Hopes &amp; Wishes
-          </option>
-          <option value="Education,Learning">Education &amp; Learning</option>
-          <option value="Funerals,Memorials">Funerals &amp; Memorials</option>
-          <option value="Medical,Illness,Healing">
-            Medical, Illness &amp; Healing
-          </option>
-          <option value="Missions,Faith,Church">
-            Missions, Faith &amp; Church
-          </option>
-          <option value="Sports,Teams,Clubs">Sports, Teams &amp; Clubs</option>
-          <option value="Travel,Adventure">Travel &amp; Adventure</option>
-          <option value="Volunteer,Service">Volunteer &amp; Service</option>
-          <option value="Weddings,Honeymoons">Weddings &amp; Honeymoons</option>
-          <option value="Other">Other</option>
-        </select>
-        <button>Next</button>
-      </form>
-      <p style={{ fontSize: "14px" }}>
-        By continuing, you agree to the GoFundMe terms and acknowledge receipt
-        of our privacy policy.
-      </p>
-    </div>
-  );
+            <select name="fund-reason" onChange={updateLetsStartInfo}>
+            <option value="0">Choose a category</option>
+            <option value="Accidents,Emergencies">
+                Accidents &amp; Emergencies
+            </option>
+            <option value="Animals,Pets">Animals &amp; Pets</option>
+            <option value="Babies,Children,Family">
+                Babies, Children &amp; Family
+            </option>
+            <option value="Business,Entrepreneurs">
+                Business &amp; Entrepreneurs
+            </option>
+            <option value="Celebrations,Events">Celebrations &amp; Events</option>
+            <option value="Community,Neighbours">
+                Community &amp; Neighbours
+            </option>
+            <option value="Competitions,Pageants">
+                Competitions &amp; Pageants
+            </option>
+            <option value="Creative Arts,Music,Film">
+                Creative Arts, Music &amp; Film
+            </option>
+            <option value="Dreams,HopesNWishes">
+                Dreams, Hopes &amp; Wishes
+            </option>
+            <option value="Education,Learning">Education &amp; Learning</option>
+            <option value="Funerals,Memorials">Funerals &amp; Memorials</option>
+            <option value="Medical,Illness,Healing">
+                Medical, Illness &amp; Healing
+            </option>
+            <option value="Missions,Faith,Church">
+                Missions, Faith &amp; Church
+            </option>
+            <option value="Sports,Teams,Clubs">Sports, Teams &amp; Clubs</option>
+            <option value="Travel,Adventure">Travel &amp; Adventure</option>
+            <option value="Volunteer,Service">Volunteer &amp; Service</option>
+            <option value="Weddings,Honeymoons">Weddings &amp; Honeymoons</option>
+            <option value="Other">Other</option>
+            </select>
+            <button>Next</button>
+        </form>
+        <p style={{ fontSize: "14px" }}>
+            By continuing, you agree to the GoFundMe terms and acknowledge receipt
+            of our privacy policy.
+            </p>
+            
+        </div>
+          {postCodeModal && (
+        <Overlay>
+          <PostCodeModal setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={ letsStartInfo }/>
+        </Overlay>
+      )}
+    </>
+    );
 }
 const WarningP = styled.p`
   background-color: ${({ para }) =>
@@ -203,17 +205,6 @@ function SetTargetForm({ setStepCount, setStartLoading, setMyFundraiser }) {
     return true;
   }
   const postTargetMoney = (e) => {
-    // setStartLoading(true)
-    // e.preventDefault();
-    // if (amountValid()) {
-    //     axios.post('http://localhost:3001/target-amount',{targetMoney : targetMoney}).then((res) => {
-    //         setStartLoading(false);
-    //         setStepCount(3);
-
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // }
     e.preventDefault();
     if (amountValid()) {
       setStartLoading(true);
@@ -428,38 +419,20 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
   function validateStory() {
     return true;
   }
-  const postStory = () => {
-    if (validateStory()) {
-      setStartLoading(true);
-      setTimeout(() => {
-        // setMyFundraiser((prevVal) => {
-        //     let payload = {
-        //         ...prevVal,
-        //         title: story.title,
-        //         story: story.story,
-        //     };
-        //     postData();
-        //   setStartLoading(false);
-        //   setStepCount(5);
-        //   return payload;
-        // });
-        }, 2000);
-    }
-    };
-    async function postData(data) {
+    function postData(data) {
         setStartLoading(true);
         let payload = {
             ...myFundraiser,
             title: story.title,
             story: story.story,
         };
-        try {
-            let res = await axios.post("http://localhost:3001/myAllFundraiser", payload);
+
+        let res = axios.post("http://localhost:3001/myAllFundraiser", payload);
+        let res2 = axios.post("http://localhost:3001/myCurrFundraiser", payload);
+        Promise.all([res, res2]).then(() => {
             setStartLoading(false);
             setStepCount(5);
-        } catch (err) {
-            console.log(err);
-        }
+        })
     }
   return (
     <div>
@@ -658,7 +631,6 @@ const Overlay = styled.div`
 
 export function FillingForm({ setFillingForm }) {
   const [stepCount, setStepCount] = useState(1);
-  const [postCodeModal, setPostCodeModal] = useState(false);
   const [startLoading, setStartLoading] = useState(false);
   const [myFundraiser, setMyFundraiser] = useState();
   console.log(myFundraiser);
@@ -669,7 +641,6 @@ export function FillingForm({ setFillingForm }) {
         <StepsBar stepCount={stepCount} />
         {stepCount === 1 ? (
           <LetsStart
-            setPostCodeModal={setPostCodeModal}
             setStepCount={setStepCount}
             setStartLoading={setStartLoading}
             setMyFundraiser={setMyFundraiser}
@@ -698,11 +669,6 @@ export function FillingForm({ setFillingForm }) {
           />
         ) : null}
       </div>
-      {postCodeModal && (
-        <Overlay>
-          {/* <PostCodeModal setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={ letsStartInfo }/> */}
-        </Overlay>
-      )}
       <SimpleBackdrop handleClose={startLoading} />
     </>
   );

@@ -1,40 +1,67 @@
 {
   "users": [
-   
-  ],
-  "currLoggedIn": {},
-  "myAllFundraiser": [
-    
-  ],
-  "myCurrFundraiser": {
-    "basics": {
-      "country": "GB",
-      "fund-reason": "Weddings,Honeymoons"
-    },
-    "targetMoney": "1000",
-    "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
-    "title": "this is my story",
-    "story": "this is my another stry",
-    "id": 3
-  },
-  "currUpdates": [
     {
-      "message": "i am fine now guys",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
+      "firstName": "q",
+      "lastName": "w",
+      "emailAddress": "e",
+      "password": "r",
       "id": 1
     },
     {
-      "message": "i am awesome",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
+      "firstName": "r",
+      "lastName": "t",
+      "emailAddress": "a",
+      "password": "s",
       "id": 2
     },
     {
-      "message": "i am goind to due",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
       "id": 3
     }
-  ]
+  ],
+  "currLoggedIn": {},
+  "myAllFundraiser": [
+    {
+      "basics": {
+        "fund-reason": "Weddings,Honeymoons"
+      },
+      "targetMoney": "1000",
+      "img": "blob:http://localhost:3000/51f9ff9e-2d90-4f8d-a45a-7fc398dc760b",
+      "title": "rahul",
+      "story": "i am broke",
+      "id": 1
+    },
+    {
+      "basics": {
+        "fund-reason": "Weddings,Honeymoons"
+      },
+      "targetMoney": "1000",
+      "img": "blob:http://localhost:3000/51f9ff9e-2d90-4f8d-a45a-7fc398dc760b",
+      "title": "rahul",
+      "story": "i am broke",
+      "id": 2
+    },
+    {
+      "basics": {
+        "country": "CH",
+        "fund-reason": "Weddings,Honeymoons"
+      },
+      "targetMoney": "15000",
+      "img": "blob:http://localhost:3000/495d771a-e407-44d5-b4b7-31253ee27196",
+      "title": "rahul",
+      "story": "1212121212",
+      "id": 3
+    },
+    {
+      "img": "blob:http://localhost:3000/e1c2c631-d502-4bce-a4b8-78f0d4a430d2",
+      "title": "rahul",
+      "story": "12345",
+      "id": 4
+    }
+  ],
+  "myCurrFundraiser": {
+    "img": "blob:http://localhost:3000/e1c2c631-d502-4bce-a4b8-78f0d4a430d2",
+    "title": "rahul",
+    "story": "12345"
+  },
+  "currUpdates": []
 }
