@@ -22,7 +22,12 @@
   margin-right: 10px;
   width: 100px;
   height: 6px;
-  background-color: rgb(2, 169, 92);
+}
+.stepsProgressCont > .completed {
+  background-color: rgb(2, 169, 92) !important;
+}
+.stepsProgressCont > .not {
+  background-color: rgba(171, 190, 182, 0.685) !important;
 }
 .center form {
   margin-top: 20px;

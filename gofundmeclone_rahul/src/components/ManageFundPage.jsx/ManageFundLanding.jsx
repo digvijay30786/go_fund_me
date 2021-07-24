@@ -8,7 +8,9 @@ import styled from "styled-components";
 import axios from "axios";
 import styles from "./style.module.css";
 import Menu from '../components/menu';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import LongMenu from './Triangle'
+import { v4 as uuid } from 'uuid';
 // importing icons
 import { BsPencil, BsThreeDotsVertical, BsUpload } from "react-icons/bs";
 import {
@@ -139,6 +141,15 @@ function TeamTab() {
 }
 
 function UpdatesTab() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const [updateMessages, setUpdateMessages] = useState();
   const [handleModal, setHandleModal] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -163,6 +174,7 @@ function UpdatesTab() {
       message: textAreaVal,
       firstname: firstName,
       lastname: lastName,
+      id : uuid()
     };
     axios.post('http://localhost:3001/currUpdates',payload).then((res) => {
       setUpdateMessages((prevMessage) => {
@@ -174,6 +186,12 @@ function UpdatesTab() {
     })
   }
 
+  function deleteUpdate(id) {
+    axios.delete(`http://localhost:3001/currUpdates/${id}`).then((res) => {
+      fetchData();
+    })
+  }
+  console.log('updateMessages', updateMessages );
   return (
     <>
       {updateMessages === undefined ? (
@@ -224,7 +242,7 @@ function UpdatesTab() {
                   <br />
                   This was shared with your donors
                 </div>
-                <BsThreeDotsVertical onClick={()=>alert('i am clicked bitch')} />
+                <LongMenu style={{ position: 'absolute', right: '0' }} onclickEvent={()=> deleteUpdate(elem.id) }/>
               </UserUpdateMessage>
             );
           })}

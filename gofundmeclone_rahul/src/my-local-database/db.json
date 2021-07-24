@@ -1,60 +1,11 @@
 {
   "users": [
-    {
-      "firstName": "Rahul",
-      "lastName": "rampuri",
-      "emailAddress": "rahul@masai.school",
-      "password": "12345",
-      "id": 1
-    }
   ],
-  "currLoggedIn": {
-    "firstName": "Rahul",
-    "lastName": "rampuri",
-    "emailAddress": "rahul@masai.school",
-    "password": "12345"
-  },
+  "currLoggedIn": {},
   "myAllFundraiser": [
-    {
-      "basics": {
-        "country": "GB",
-        "fund-reason": "Weddings,Honeymoons"
-      },
-      "targetMoney": "15000",
-      "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
-      "title": "baba ka dhaba",
-      "story": "halua",
-      "id": 1
-    }
   ],
   "myCurrFundraiser": {
-    "basics": {
-      "country": "GB",
-      "fund-reason": "Weddings,Honeymoons"
-    },
-    "targetMoney": "15000",
-    "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
-    "title": "baba ka dhaba",
-    "story": "halua"
+    
   },
-  "currUpdates": [
-    {
-      "message": "Hello how do u do",
-      "firstname": "Rahul",
-      "lastname": "rampuri",
-      "id": 1
-    },
-    {
-      "message": "i am broke nigga",
-      "firstname": "Rahul",
-      "lastname": "rampuri",
-      "id": 2
-    },
-    {
-      "message": "Can u fuck your ass nigga",
-      "firstname": "Rahul",
-      "lastname": "rampuri",
-      "id": 3
-    }
-  ]
+  "currUpdates": []
 }
