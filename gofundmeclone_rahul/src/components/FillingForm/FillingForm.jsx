@@ -329,17 +329,7 @@ function AddPhoto({ setStepCount, setStartLoading, setMyFundraiser }) {
   );
 
   const postImage = (e) => {
-    // setStartLoading(true)
-    // e.preventDefault();
-    // console.log(files);
-    // if (files.length > 0 ) {
-    //     axios.post('http://localhost:3001/fundraiser-image', { img: files[0].preview }).then((res) => {
-    //         setStartLoading(false);
-    //         setStepCount(4);
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // }
+    
     e.preventDefault();
     if (files.length > 0) {
       setStartLoading(true);
@@ -508,8 +498,7 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
     </div>
   );
 }
-function FundraiserReady({ setFillingFormDone, myFundraiser }) {
-
+function FundraiserReady() {
 
   return (
     <div>
@@ -670,15 +659,9 @@ const Overlay = styled.div`
 export function FillingForm({ setFillingForm }) {
   const [stepCount, setStepCount] = useState(1);
   const [postCodeModal, setPostCodeModal] = useState(false);
-  // const [letsStartInfo, setLetsStartInfo] = useState();
   const [startLoading, setStartLoading] = useState(false);
-  const [isFillingFormDone, setFillingFormDone] = useState(false);
   const [myFundraiser, setMyFundraiser] = useState();
   console.log(myFundraiser);
-  useEffect(() => {
-    isFillingFormDone && setFillingForm(true);
-  }, [isFillingFormDone, setFillingForm]);
-
   return (
     <>
       <StepsNavBar />
@@ -712,8 +695,6 @@ export function FillingForm({ setFillingForm }) {
           />
         ) : stepCount === 5 ? (
           <FundraiserReady
-            setStartLoading={setStartLoading}
-            setFillingFormDone={setFillingFormDone}
           />
         ) : null}
       </div>

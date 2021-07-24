@@ -1,23 +1,6 @@
 {
   "users": [
     {
-      "firstName": "rahul",
-      "lastName": "rajput",
-      "emailAddress": "rahulmail.com",
-      "password": "123456",
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "firstName": "gunnu",
-      "lastName": "chunnu",
-      "emailAddress": "email@3",
-      "password": "12345",
-      "id": 3
-    },
-    {
       "firstName": "gunnu",
       "lastName": "chunnu",
       "emailAddress": "kdjfkjdkf",
@@ -32,42 +15,6 @@
     "password": "343434"
   },
   "myAllFundraiser": [
-    [
-      {
-        "basics": {
-          "country": "US",
-          "fund-reason": "Weddings,Honeymoons"
-        },
-        "targetMoney": "1000",
-        "img": "blob:http://localhost:3000/25bb82b9-e3e7-44f2-b3f5-af688fae0767",
-        "title": "rahul",
-        "story": "1234"
-      }
-    ],
-    [
-      [
-        {
-          "basics": {
-            "country": "US",
-            "fund-reason": "Weddings,Honeymoons"
-          },
-          "targetMoney": "1000",
-          "img": "blob:http://localhost:3000/25bb82b9-e3e7-44f2-b3f5-af688fae0767",
-          "title": "rahul",
-          "story": "1234"
-        }
-      ],
-      {
-        "basics": {
-          "country": "US",
-          "fund-reason": "Animals,Pets"
-        },
-        "targetMoney": "1000",
-        "img": "blob:http://localhost:3000/a8d7595e-fb11-422a-af0a-7fe2e53ced03",
-        "title": "rahul",
-        "story": "1233333333333333333333333333333333333333333333333333333333333"
-      }
-    ],
     {
       "basics": {
         "country": "GB",
@@ -77,6 +24,37 @@
       "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
       "title": "this is my story",
       "story": "this is my another stry",
+      "id": 3
+    }
+  ],
+  "myCurrFundraiser": {
+    "basics": {
+      "country": "GB",
+      "fund-reason": "Weddings,Honeymoons"
+    },
+    "targetMoney": "1000",
+    "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
+    "title": "this is my story",
+    "story": "this is my another stry",
+    "id": 3
+  },
+  "currUpdates": [
+    {
+      "message": "i am fine now guys",
+      "firstname": "gunnu",
+      "lastname": "chunnu",
+      "id": 1
+    },
+    {
+      "message": "i am awesome",
+      "firstname": "gunnu",
+      "lastname": "chunnu",
+      "id": 2
+    },
+    {
+      "message": "i am goind to due",
+      "firstname": "gunnu",
+      "lastname": "chunnu",
       "id": 3
     }
   ]

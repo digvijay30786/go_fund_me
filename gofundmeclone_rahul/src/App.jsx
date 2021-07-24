@@ -12,7 +12,6 @@ export default function App() {
       <Route exact path='/works' component={Works} />
       <Route path='/rahul' component={Rahul} />
       <Route path='/manageFundingPage' component={ManageFundLanding} />
-      {/* <Route path="/setTargetMoney" component={SetTargetForm} /> */}
     </Switch>
   );
 }
