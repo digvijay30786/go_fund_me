@@ -184,10 +184,10 @@ function LetsStart({
             
         </div>
           {postCodeModal && (
-        <Overlay>
-          <PostCodeModal setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={ letsStartInfo }/>
-        </Overlay>
-      )}
+            <Overlay>
+                <PostCodeModal setPostCodeModal={setPostCodeModal} setLetsStartInfo={setLetsStartInfo} letsStartInfo={ letsStartInfo }/>
+            </Overlay>
+        )}
     </>
     );
 }
@@ -507,6 +507,7 @@ const PostCodeModal = ({
     width: 900px;
     height: 500px;
     border-radius: 5px;
+    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -623,6 +624,7 @@ const Overlay = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
+  left:0;
   height: 100vh;
   z-index: 2;
   display: flex;
@@ -638,38 +640,38 @@ export function FillingForm({ setFillingForm }) {
   return (
     <>
       <StepsNavBar />
-      <div className={styles.center}>
-        <StepsBar stepCount={stepCount} />
-        {stepCount === 1 ? (
-          <LetsStart
-            setStepCount={setStepCount}
-            setStartLoading={setStartLoading}
-            setMyFundraiser={setMyFundraiser}
-          />
-        ) : stepCount === 2 ? (
-          <SetTargetForm
-            setStartLoading={setStartLoading}
-            setStepCount={setStepCount}
-            setMyFundraiser={setMyFundraiser}
-          />
-        ) : stepCount === 3 ? (
-          <AddPhoto
-            setStartLoading={setStartLoading}
-            setStepCount={setStepCount}
-            setMyFundraiser={setMyFundraiser}
-          />
-        ) : stepCount === 4 ? (
-          <TellYourStory
-            setStartLoading={setStartLoading}
-            setStepCount={setStepCount}
-            setMyFundraiser={setMyFundraiser}
-            myFundraiser={myFundraiser}
-          />
-        ) : stepCount === 5 ? (
-          <FundraiserReady
-          />
-        ) : null}
-      </div>
+        <div className={styles.center}>
+            <StepsBar stepCount={stepCount} />
+            {stepCount === 1 ? (
+            <LetsStart
+                setStepCount={setStepCount}
+                setStartLoading={setStartLoading}
+                setMyFundraiser={setMyFundraiser}
+            />
+            ) : stepCount === 2 ? (
+            <SetTargetForm
+                setStartLoading={setStartLoading}
+                setStepCount={setStepCount}
+                setMyFundraiser={setMyFundraiser}
+            />
+            ) : stepCount === 3 ? (
+            <AddPhoto
+                setStartLoading={setStartLoading}
+                setStepCount={setStepCount}
+                setMyFundraiser={setMyFundraiser}
+            />
+            ) : stepCount === 4 ? (
+            <TellYourStory
+                setStartLoading={setStartLoading}
+                setStepCount={setStepCount}
+                setMyFundraiser={setMyFundraiser}
+                myFundraiser={myFundraiser}
+            />
+            ) : stepCount === 5 ? (
+            <FundraiserReady
+            />
+            ) : null}
+        </div>
       <SimpleBackdrop handleClose={startLoading} />
     </>
   );
