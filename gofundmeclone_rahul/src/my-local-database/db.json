@@ -1,31 +1,10 @@
 {
   "users": [
-    {
-      "firstName": "gunnu",
-      "lastName": "chunnu",
-      "emailAddress": "kdjfkjdkf",
-      "password": "343434",
-      "id": 4
-    }
+   
   ],
-  "currLoggedIn": {
-    "firstName": "gunnu",
-    "lastName": "chunnu",
-    "emailAddress": "kdjfkjdkf",
-    "password": "343434"
-  },
+  "currLoggedIn": {},
   "myAllFundraiser": [
-    {
-      "basics": {
-        "country": "GB",
-        "fund-reason": "Weddings,Honeymoons"
-      },
-      "targetMoney": "1000",
-      "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
-      "title": "this is my story",
-      "story": "this is my another stry",
-      "id": 3
-    }
+    
   ],
   "myCurrFundraiser": {
     "basics": {
