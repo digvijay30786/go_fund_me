@@ -8,7 +8,7 @@ import styled from "styled-components";
 import axios from "axios";
 import styles from "./style.module.css";
 // importing icons
-import { BsPencil ,BsThreeDotsVertical ,BsUpload} from "react-icons/bs";
+import { BsPencil, BsThreeDotsVertical, BsUpload } from "react-icons/bs";
 import {
   AiOutlineEye,
   AiOutlineBank,
@@ -148,8 +148,8 @@ function UpdatesTab() {
       firstname: firstName,
       lastname: lastName,
     };
-      let payload2 = [...updateMessages, payload];
-      axios.patch('http://localhost:3001/curr-logged-in')
+    let payload2 = [...updateMessages, payload];
+    axios.patch('http://localhost:3001/curr-logged-in')
   }
   console.log(textAreaVal);
   return (
@@ -202,7 +202,7 @@ function UpdatesTab() {
                   <br />
                   This was shared with your donors
                 </div>
-                <BsThreeDotsVertical/>
+                <BsThreeDotsVertical />
               </UserUpdateMessage>
             );
           })}
@@ -243,7 +243,7 @@ function UpdateArea() {
   const [donors, setDonors] = useState(false);
   const [team, setTeam] = useState(false);
   const [updates, setUpdates] = useState(true);
-  function switc (para) {
+  function switc(para) {
     if (para === 'Donors') {
       setDonors(true);
       setTeam(false);
@@ -252,7 +252,7 @@ function UpdateArea() {
       setDonors(false);
       setTeam(true);
       setUpdates(false);
-    }else if (para === 'updates') {
+    } else if (para === 'updates') {
       setDonors(false);
       setTeam(false);
       setUpdates(true);
@@ -262,9 +262,9 @@ function UpdateArea() {
     <>
       <StyledUpdateArea>
         <div className="options">
-          <h4 onClick = {()=>switc('Donors')} className = {donors && 'active'}>Donors</h4>
-          <h4 onClick = {()=>switc('team')} className = {team && 'active'}>Team</h4>
-          <h4 onClick = {()=>switc('updates') } className = {updates && 'active'} >Updates</h4>
+          <h4 onClick={() => switc('Donors')} className={donors && 'active'}>Donors</h4>
+          <h4 onClick={() => switc('team')} className={team && 'active'}>Team</h4>
+          <h4 onClick={() => switc('updates')} className={updates && 'active'} >Updates</h4>
         </div>
         <div>
           {donors ? <DonorsTab /> : team ? <TeamTab /> : <UpdatesTab />}
@@ -278,7 +278,8 @@ export function ManageFundLanding() {
   return (
     <>
       {/* <TopView /> */}
-      {/* { <UpdateArea /> } */}
+      {/* <UpdateArea /> */}
+     
       {<FundraiserPayment/>}
     </>
   );
