@@ -278,8 +278,8 @@ export function ManageFundLanding() {
   return (
     <>
       {/* <TopView /> */}
-      {/* <UpdateArea /> */}
-      <FundraiserPayment/>        
+      {/* { <UpdateArea /> } */}
+      {<FundraiserPayment/>}
     </>
   );
 }
