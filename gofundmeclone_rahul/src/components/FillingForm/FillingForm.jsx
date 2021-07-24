@@ -419,6 +419,7 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
   function validateStory() {
     return true;
   }
+
     function postData(data) {
         setStartLoading(true);
         let payload = {
@@ -426,10 +427,10 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
             title: story.title,
             story: story.story,
         };
+        let promise1 = axios.post("http://localhost:3001/myAllFundraiser", payload);
+        let promise2 = axios.post("http://localhost:3001/myCurrFundraiser",payload);   
+        Promise.all([promise1, promise2]).then((res) => {
 
-        let res = axios.post("http://localhost:3001/myAllFundraiser", payload);
-        let res2 = axios.post("http://localhost:3001/myCurrFundraiser", payload);
-        Promise.all([res, res2]).then(() => {
             setStartLoading(false);
             setStepCount(5);
         })

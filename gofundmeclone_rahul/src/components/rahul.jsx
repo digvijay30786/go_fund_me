@@ -22,4 +22,4 @@ export function Rahul() {
       {isSignup ? <FillingForm /> : <Signup setIsSignup={setIsSignup} />}
     </div>
   );
-}
+};
