@@ -203,17 +203,7 @@ function SetTargetForm({ setStepCount, setStartLoading, setMyFundraiser }) {
     return true;
   }
   const postTargetMoney = (e) => {
-    // setStartLoading(true)
-    // e.preventDefault();
-    // if (amountValid()) {
-    //     axios.post('http://localhost:3001/target-amount',{targetMoney : targetMoney}).then((res) => {
-    //         setStartLoading(false);
-    //         setStepCount(3);
-
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     })
-    // }
+    
     e.preventDefault();
     if (amountValid()) {
       setStartLoading(true);
@@ -446,20 +436,19 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
         }, 2000);
     }
     };
-    async function postData(data) {
+    function postData(data) {
         setStartLoading(true);
         let payload = {
             ...myFundraiser,
             title: story.title,
             story: story.story,
         };
-        try {
-            let res = await axios.post("http://localhost:3001/myAllFundraiser", payload);
+        let promise1 = axios.post("http://localhost:3001/myAllFundraiser", payload);
+        let promise2 = axios.post("http://localhost:3001/myCurrFundraiser",payload);   
+        Promise.all([promise1, promise2]).then((res) => {
             setStartLoading(false);
             setStepCount(5);
-        } catch (err) {
-            console.log(err);
-        }
+        })
     }
   return (
     <div>

@@ -59,7 +59,8 @@ function TopView() {
       console.log(err)
     })
 
-  },[])
+  }, [])
+  console.log(currFundraiser)
   return (
     <>
       <StyledTopView>
@@ -150,6 +151,7 @@ function UpdatesTab() {
     setUpdateMessages(promise1.data);
     setFirstName(promise2.data.firstName);
     setLastName(promise2.data.lastName);
+
   }
   
   useEffect(() => {
@@ -171,7 +173,7 @@ function UpdatesTab() {
       alert(err.message)
     })
   }
-  console.log('updateMessages', updateMessages );
+
   return (
     <>
       {updateMessages === undefined ? (
@@ -297,11 +299,11 @@ function UpdateArea() {
 export function ManageFundLanding() {
   return (
     <>
-      <Menu />
+      < Menu/>
       <TopView />
       <UpdateArea />
-      <Footer />
       {/* <FundraiserPayment /> */}
+      <Footer />
     </>
   );
 }

@@ -1,18 +1,18 @@
 {
   "users": [
     {
-      "firstName": "gunnu",
-      "lastName": "chunnu",
-      "emailAddress": "kdjfkjdkf",
-      "password": "343434",
-      "id": 4
+      "firstName": "Rahul",
+      "lastName": "rampuri",
+      "emailAddress": "rahul@masai.school",
+      "password": "12345",
+      "id": 1
     }
   ],
   "currLoggedIn": {
-    "firstName": "gunnu",
-    "lastName": "chunnu",
-    "emailAddress": "kdjfkjdkf",
-    "password": "343434"
+    "firstName": "Rahul",
+    "lastName": "rampuri",
+    "emailAddress": "rahul@masai.school",
+    "password": "12345"
   },
   "myAllFundraiser": [
     {
@@ -20,11 +20,11 @@
         "country": "GB",
         "fund-reason": "Weddings,Honeymoons"
       },
-      "targetMoney": "1000",
-      "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
-      "title": "this is my story",
-      "story": "this is my another stry",
-      "id": 3
+      "targetMoney": "15000",
+      "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
+      "title": "baba ka dhaba",
+      "story": "halua",
+      "id": 1
     }
   ],
   "myCurrFundraiser": {
@@ -32,29 +32,28 @@
       "country": "GB",
       "fund-reason": "Weddings,Honeymoons"
     },
-    "targetMoney": "1000",
-    "img": "blob:http://localhost:3000/91c18d10-347a-4308-8919-2871bc32489d",
-    "title": "this is my story",
-    "story": "this is my another stry",
-    "id": 3
+    "targetMoney": "15000",
+    "img": "blob:http://localhost:3000/56fdfdca-34f1-4448-8620-aaf5b39d2f63",
+    "title": "baba ka dhaba",
+    "story": "halua"
   },
   "currUpdates": [
     {
-      "message": "i am fine now guys",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
+      "message": "Hello how do u do",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
       "id": 1
     },
     {
-      "message": "i am awesome",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
+      "message": "i am broke nigga",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
       "id": 2
     },
     {
-      "message": "i am goind to due",
-      "firstname": "gunnu",
-      "lastname": "chunnu",
+      "message": "Can u fuck your ass nigga",
+      "firstname": "Rahul",
+      "lastname": "rampuri",
       "id": 3
     }
   ]
