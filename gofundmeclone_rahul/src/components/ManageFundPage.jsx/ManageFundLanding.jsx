@@ -299,11 +299,13 @@ function UpdateArea() {
 export function ManageFundLanding() {
   return (
     <>
+
       < Menu/>
       <TopView />
       <UpdateArea />
       {/* <FundraiserPayment /> */}
       <Footer />
+
     </>
   );
 }

@@ -129,28 +129,55 @@ const FundPreviewOtherOptions = styled.div`
   width:505px;
   margin-left:230px;
   padding-top:40px;
+
+  
   & h3 {
       border-bottom:1px solid rgb(200, 200, 200, 0.5);
       padding-bottom:10px;
       margin:20px 0;
   }
   .fade-users {
-        // border:1px solid lime;
-        background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(#fff));
-            background: linear-gradient(
-        180deg
-        ,hsla(0,0%,100%,0) 0,#fff);
             bottom: 0;
             left: 0;
-            // position: absolute;
             right: 0;
             top: 0;
+            background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(#fff));
+    font-family: Lato,Trebuchet,Arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
         }
   }
-  .fade-users > div > div {
-    //   border:1px solid lime;
+  // .fade-users > div > div {
+  //   //   border:1px solid lime;
+  //     width:80%;
+  //     background-color:rgb(200, 200, 200, 0.5);
+  //   }
+    .fade-users-box{
+        border-bottom: 1px solid #c8c8c8;
+          margin-bottom: 1rem;
+           padding-bottom: 1rem;
+    }
+    .longdiv{
+      
       width:80%;
+      height:15px;
+      margin:6px;
+     
       background-color:rgb(200, 200, 200, 0.5);
+     
+    }
+     .smalldiv{
+       
+      width:30%;
+      height:15px;
+      margin:6px;
+      background-color:rgb(200, 200, 200, 0.5);
+    
+    }
+    .comment{
+      width:100%;
+      displey:flex;
+      flex-direction:column;
     }
 
 `
@@ -205,46 +232,62 @@ export function FundraiserPayment() {
           </p>
         </div>
         <h3>Comments</h3>
+        
         <div className= 'fade-users'>
-            <div style={{ display: "flex" }}>
+            <div  className= 'fade-users-box'style={{ display: "flex" }}>
                 <img
                     src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
                     alt=""
                     srcset=""
                 />
-                <div></div>
-                <div></div>
+                <div className="comment">
+            <div className="longdiv"></div>
+              <div className="smalldiv"></div>
+              </div>
             </div>
             
-            <div style={{ display: "flex" }}>
+            <div  className= 'fade-users-box' style={{ display: "flex" }}>
+            <img
+                src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
+                alt=""
+                srcset=""
+            /><div className="comment">
+            <div className="longdiv"></div>
+              <div className="smalldiv"></div>
+              </div>
+            
+            </div>
+            
+            <div  className= 'fade-users-box'style={{ display: "flex" }}>
             <img
                 src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
                 alt=""
                 srcset=""
             />
-            <div></div>
-            <div></div>
-            </div>
-            
-            <div style={{ display: "flex" }}>
-            <img
-                src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-                alt=""
-                srcset=""
-            />
-            <div></div>
-            <div></div>
-            </div>
+         <div className="comment">
+            <div className="longdiv"></div>
+              <div className="smalldiv"></div>
+              </div>
+        </div>
                 
             <div style={{ display: "flex" }}>
             <img
                 src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
                 alt=""
                 srcset=""
-            />
-            </div>
-        </div>
+            /><div className="comment">
+            <div className="longdiv"></div>
+              <div className="smalldiv"></div>
+              </div>
+          </div>
+          
+          
+          </div>
+          
       </FundPreviewOtherOptions>
+      
+      <NowCard></NowCard>
+     <Nfundadvice></Nfundadvice>
     </>
   );
 }
@@ -310,5 +353,135 @@ function LinearDeterminate() {
     <div className={classes.root}>
       <StyledLinearProgress variant="determinate" value={progress} />
     </div>
+  );
+}
+
+
+// reort fundriser
+
+const Mreportfund = styled.div`
+  width: 50vw;
+  margin-left:17%;
+ 
+  margin-top:4%;
+   
+ 
+
+
+  button{    border: 1px solid transparent;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+  align-items: center;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+  font-family: Lato,Trebuchet,Arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+
+`;
+
+
+
+function NowCard() {
+  return (
+      <Mreportfund>
+        
+       <div><button> <span class="material-icons-outlined">assistant_photo</span>
+        Report fundraiser </button>
+        </div>
+    </Mreportfund>
+  );
+}
+
+
+const Mfundadvice = styled.div`
+
+  
+  .mainicon{
+  width: 1000px;
+  height:171px;
+  margin-left:17%;
+  margin-top:4%;
+  display: flex;
+  z-index:5;
+}
+
+     .iconspic{
+    width:100%;
+    height:90%;
+    margin: 2%;
+ 
+    display: flex;
+    }
+
+    .material-icons-outlined{
+      font-size:70px;
+      font-weight:100;
+    }
+    .logo{
+
+ 
+    }
+    .advicebox {
+      margin-left:10px;
+   
+    }
+    .advicebox > h2{
+    font-size: 1rem;
+    line-height: 1.5;
+    display: block;
+    font-weight: 900;
+    color: #333;
+    font-family: Lato,Trebuchet,Arial,sans-serif;}
+    }
+     .advicebox > p{
+       margin-top:15px;
+       color: #767676;
+       font-size: .875rem;
+    line-height: 1.71;
+    font-family: Lato,Trebuchet,Arial,sans-serif;
+     }
+     .logo > img{
+       width:60px;
+      // heigth:20px;
+     }
+`;
+function Nfundadvice() {
+  return (
+      <Mfundadvice>
+        
+      <div className="mainicon" >
+        <div className="iconspic">
+          <div className="logo"><span class="material-icons-outlined">
+          emoji_events
+          </span></div>
+          <div className="advicebox">
+            <h2>No.1 fundraising platform</h2>
+            <p>More people start fundraisers on GoFundMe than on any other platform. Learn more</p>
+          </div>
+        </div>
+      
+        <div className="iconspic">
+           <div className="logo"><img src="https://img.icons8.com/ios/452/handshake-heart.png"></img></div>
+          <div className="advicebox">
+            <h2>GoFundMe Guarantee</h2>
+            <p>In the unlikely event that something isn’t right, we will work with you to determine if misuse has occurred. Learn more</p>
+          </div>
+        </div>
+        <div className="iconspic"><div className="logo"><span class="material-icons-outlined">
+update
+</span></div>
+          <div className="advicebox">
+            <h2>GoFundMe Guarantee</h2>
+            <p>In the unlikely event that something isn’t right, we will work with you to determine if misuse has occurred. Learn more</p>
+          </div></div>
+       
+        </div>
+    </Mfundadvice>
+
   );
 }
