@@ -7,7 +7,7 @@ import StepLabel from "@material-ui/core/StepLabel";
 import StepContent from "@material-ui/core/StepContent";
 import Typography from "@material-ui/core/Typography";
 //////////////////////////////////////////////////
-
+import { Link } from "react-router-dom";
 import styles from "./FillingForm.module.css";
 import styled from "styled-components";
 import { LogoSvg } from "../LogoSVG";
@@ -509,9 +509,7 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
   );
 }
 function FundraiserReady({ setFillingFormDone, myFundraiser }) {
-  async function postData() {
-    setFillingFormDone(true);
-  }
+
 
   return (
     <div>
@@ -526,7 +524,7 @@ function FundraiserReady({ setFillingFormDone, myFundraiser }) {
         donation.
       </WarningP>
       <form onSubmit={(e) => e.preventDefault()}>
-        <button onClick={postData}>Next</button>
+        <Link to="/manageFundingPage"><button >Next</button></Link>
       </form>
     </div>
   );
