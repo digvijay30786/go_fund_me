@@ -16,6 +16,7 @@ import { FaSistrix } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 import { BiEuro } from "react-icons/bi";
 import axios from "axios";
+import SimpleAlerts from '../Alert'
 import { useDropzone } from "react-dropzone";
 
 import { SimpleBackdrop } from "../Loading";
@@ -61,6 +62,7 @@ function LetsStart({
 }) {
   const [postCodeModal, setPostCodeModal] = useState(false);
   const [letsStartInfo, setLetsStartInfo] = useState();
+  const [error, setError] = useState();
   const updateLetsStartInfo = (e) => {
     const { name, value } = e.target;
     let payload = {
@@ -71,9 +73,17 @@ function LetsStart({
     console.log(letsStartInfo);
   };
   function validateLetsStartInfo() {
-    
-      return true;
-    //   <SimpleAlerts />
+    if (letsStartInfo === undefined) {
+      setError('Please fill your information');
+    }else if (letsStartInfo.country === undefined || letsStartInfo.country === '') {
+      setError('Please select your country');
+    } else if (letsStartInfo.postcode === undefined || letsStartInfo.postcode === '') {
+      setError('Please choose your postcode');
+    } else if (letsStartInfo.fundReason === undefined || letsStartInfo.fundReason === '') {
+      setError('Please choose your fund reason');
+    } else {
+      return true; 
+    }
   }
   const postLetsStartInfo = (e) => {
     
@@ -96,6 +106,7 @@ function LetsStart({
 
   return (
     <>
+      {error !== undefined && <SimpleAlerts message={ error }/> }
         <div>
         <h3>Let's Start with the basics</h3>
         <form onSubmit={postLetsStartInfo}>
@@ -134,9 +145,9 @@ function LetsStart({
             onClick={() => setPostCodeModal(true)}
             value={letsStartInfo !== undefined ? letsStartInfo.postcode : ""}
             />
-            <label htmlFor="fund-reason">What are you fundraising for?</label>
+            <label htmlFor="fundReason">What are you fundraising for?</label>
 
-            <select name="fund-reason" onChange={updateLetsStartInfo}>
+            <select name="fundReason" onChange={updateLetsStartInfo}>
             <option value="0">Choose a category</option>
             <option value="Accidents,Emergencies">
                 Accidents &amp; Emergencies
@@ -201,8 +212,13 @@ const WarningP = styled.p`
 `;
 function SetTargetForm({ setStepCount, setStartLoading, setMyFundraiser }) {
   const [targetMoney, setTargetMoney] = useState();
+  const [error, setError] = useState();
   function amountValid() {
-    return true;
+    if (targetMoney === undefined||targetMoney ==='') {
+      setError('Please fill your target amount')
+    } else {
+      return true;
+    }
   }
   const postTargetMoney = (e) => {
     e.preventDefault();
@@ -222,33 +238,36 @@ function SetTargetForm({ setStepCount, setStartLoading, setMyFundraiser }) {
     }
   };
   return (
-    <div>
-      <h2>Set your fundraising target</h2>
-      <form onSubmit={postTargetMoney}>
-        <label htmlFor="">
-          How much would you like to raise?
-          <div className={styles.targetMoneyInput}>
-            <BiEuro />
-            <input
-              onChange={(e) => setTargetMoney(e.target.value)}
-              value={targetMoney}
-              type="text"
-              name="target-money"
-              placeholder="Enter target amount"
-            />
-          </div>
-        </label>
-        <WarningP>
-          GoFundMe’s platform fee is 5%. Bear in mind that transaction fees,
-          including credit and debit charges, are deducted from each donation.
-        </WarningP>
-        <WarningP para="warning">
-          To receive money raised, please make sure the person withdrawing has
-          an address and bank account in the selected country of residence.
-        </WarningP>
-        <button>Next</button>
-      </form>
-    </div>
+    <>
+      {error !== undefined && <SimpleAlerts message={ error }/> }
+      <div>
+        <h2>Set your fundraising target</h2>
+        <form onSubmit={postTargetMoney}>
+          <label htmlFor="">
+            How much would you like to raise?
+            <div className={styles.targetMoneyInput}>
+              <BiEuro />
+              <input
+                onChange={(e) => setTargetMoney(e.target.value)}
+                value={targetMoney}
+                type="text"
+                name="target-money"
+                placeholder="Enter target amount"
+              />
+            </div>
+          </label>
+          <WarningP>
+            GoFundMe’s platform fee is 5%. Bear in mind that transaction fees,
+            including credit and debit charges, are deducted from each donation.
+          </WarningP>
+          <WarningP para="warning">
+            To receive money raised, please make sure the person withdrawing has
+            an address and bank account in the selected country of residence.
+          </WarningP>
+          <button>Next</button>
+        </form>
+      </div>
+    </>
   );
 }
 
@@ -408,6 +427,7 @@ function AddPhoto({ setStepCount, setStartLoading, setMyFundraiser }) {
 
 function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
   const [story, setStory] = useState();
+  const [error, setError] = useState();
   const updateStory = (e) => {
     let { name, value } = e.target;
     let payload = {
@@ -417,59 +437,72 @@ function TellYourStory({ setStepCount, setStartLoading, myFundraiser}) {
     setStory(payload);
   };
   function validateStory() {
-    return true;
+    if (story === undefined) {
+      setError('Please provide your fundraising reason')
+    } else if (story.title === undefined || story.title === '') {
+      setError('Please provide your title')
+    } else if (story.story === undefined || story.story.length < 30) {
+      setError('Please provide fund raising reason with atleast 30 characters')
+    } else {
+      return true;
+    }
   }
 
-    function postData(data) {
-        setStartLoading(true);
-        let payload = {
-            ...myFundraiser,
-            title: story.title,
-            story: story.story,
-        };
-        let promise1 = axios.post("http://localhost:3001/myAllFundraiser", payload);
-        let promise2 = axios.post("http://localhost:3001/myCurrFundraiser",payload);   
-        Promise.all([promise1, promise2]).then((res) => {
+  function postData(data) {
+    if (validateStory()) {
+      setStartLoading(true);
+      let payload = {
+        ...myFundraiser,
+        title: story.title,
+        story: story.story,
+      };
+      let promise1 = axios.post("http://localhost:3001/myAllFundraiser", payload);
+      let promise2 = axios.post("http://localhost:3001/myCurrFundraiser", payload);
+      Promise.all([promise1, promise2]).then((res) => {
 
-            setStartLoading(false);
-            setStepCount(5);
-        })
+        setStartLoading(false);
+        setStepCount(5);
+      })
     }
+  }
   return (
-    <div>
-      <h2>Tell your story</h2>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="title">
-          What is your fundraising title?
-          <input
-            onChange={updateStory}
-            type="text"
-            name="title"
-            placeholder="e.g.Help Sarah Rebuild Her Home"
-          />
-        </label>
-        <label htmlFor="story">
-          Why are you fundraising?
-          <textarea
-            className={styles.addStoryTextArea}
-            onChange={updateStory}
-            type="text"
-            name="story"
-            placeholder="e.g. Hi there, my name is Jane and i am fundraising for"
-          />
-        </label>
-        <button
-          style={{
-            backgroundColor: "white",
-            border: "1px solid rgb(2, 169, 92)",
-            color: "rgb(2, 169, 92)",
-          }}
-        >
-          Preview fundraiser
-        </button>
-        <button onClick={postData}>Next</button>
-      </form>
-    </div>
+    <>
+      {error !== undefined && <SimpleAlerts message={ error }/> }
+      <div>
+        <h2>Tell your story</h2>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <label htmlFor="title">
+            What is your fundraising title?
+            <input
+              onChange={updateStory}
+              type="text"
+              name="title"
+              placeholder="e.g.Help Sarah Rebuild Her Home"
+            />
+          </label>
+          <label htmlFor="story">
+            Why are you fundraising?
+            <textarea
+              className={styles.addStoryTextArea}
+              onChange={updateStory}
+              type="text"
+              name="story"
+              placeholder="e.g. Hi there, my name is Jane and i am fundraising for"
+            />
+          </label>
+          <button
+            style={{
+              backgroundColor: "white",
+              border: "1px solid rgb(2, 169, 92)",
+              color: "rgb(2, 169, 92)",
+            }}
+          >
+            Preview fundraiser
+          </button>
+          <button onClick={postData}>Next</button>
+        </form>
+      </div>
+    </>
   );
 }
 function FundraiserReady() {

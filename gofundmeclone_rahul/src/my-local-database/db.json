@@ -1,72 +1,50 @@
 {
   "users": [
     {
-      "firstName": "q",
-      "lastName": "w",
-      "emailAddress": "e",
-      "password": "r",
+      "firstName": "duggu",
+      "lastName": "rajput",
+      "emailAddress": "duggurajput7358@gmail.com",
+      "password": "12345",
       "id": 1
     },
     {
-      "firstName": "r",
-      "lastName": "t",
-      "emailAddress": "a",
-      "password": "s",
+      "firstName": "rahul",
+      "lastName": "rahul",
+      "emailAddress": "rahul@gmail.com",
+      "password": "12341212414142",
       "id": 2
-    },
-    {
-      "id": 3
     }
   ],
   "currLoggedIn": {
-    "firstName": "Rahul",
-    "lastName": "rajput",
-    "emailAddress": "123",
-    "password": "123"
+    "firstName": "rahul",
+    "lastName": "rahul",
+    "emailAddress": "rahul@gmail.com",
+    "password": "12341212414142"
   },
   "myAllFundraiser": [
     {
       "basics": {
-        "fund-reason": "Weddings,Honeymoons"
+        "country": "GB",
+        "postcode": "441 16 - Alingsås, Västra Götal län",
+        "fundReason": "Missions,Faith,Church"
       },
-      "targetMoney": "1000",
-      "img": "blob:http://localhost:3000/51f9ff9e-2d90-4f8d-a45a-7fc398dc760b",
+      "targetMoney": "",
+      "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
       "title": "rahul",
-      "story": "i am broke",
+      "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj ",
       "id": 1
-    },
-    {
-      "basics": {
-        "fund-reason": "Weddings,Honeymoons"
-      },
-      "targetMoney": "1000",
-      "img": "blob:http://localhost:3000/51f9ff9e-2d90-4f8d-a45a-7fc398dc760b",
-      "title": "rahul",
-      "story": "i am broke",
-      "id": 2
-    },
-    {
-      "basics": {
-        "country": "CH",
-        "fund-reason": "Weddings,Honeymoons"
-      },
-      "targetMoney": "15000",
-      "img": "blob:http://localhost:3000/495d771a-e407-44d5-b4b7-31253ee27196",
-      "title": "rahul",
-      "story": "1212121212",
-      "id": 3
-    },
-    {
-      "img": "blob:http://localhost:3000/e1c2c631-d502-4bce-a4b8-78f0d4a430d2",
-      "title": "rahul",
-      "story": "12345",
-      "id": 4
     }
   ],
   "myCurrFundraiser": {
-    "img": "blob:http://localhost:3000/e1c2c631-d502-4bce-a4b8-78f0d4a430d2",
+    "basics": {
+      "country": "GB",
+      "postcode": "441 16 - Alingsås, Västra Götal län",
+      "fundReason": "Missions,Faith,Church"
+    },
+    "targetMoney": "",
+    "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
     "title": "rahul",
-    "story": "12345"
+    "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj "
   },
   "currUpdates": []
 }
