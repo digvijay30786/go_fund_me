@@ -1,17 +1,31 @@
 import '../App.css';
 import { Signup } from './Signup'
 import { FillingForm } from './FillingForm/FillingForm';
-import { useState } from 'react';
-import { ManageFundLanding } from './ManageFundPage.jsx/ManageFundLanding';
+import { useState, useEffect } from 'react';
+// import { ManageFundLanding } from './ManageFundPage.jsx/ManageFundLanding';
+// import { SimpleBackdrop } from './Loading';
 
-function Rahul() {
-  const [isSignup, setIsSignup] = useState(true);
-  const [isFillingFormDone , setFillingFormDone] = useState(true);
+function checkUserLoggedInOrNot() {
+  return false;
+}
+
+export function Rahul() {
+  const [isSignup, setIsSignup] = useState();
+  useEffect(() => {
+    if (checkUserLoggedInOrNot()) {
+      setIsSignup(true);
+    } else {
+      setIsSignup(false);
+    }
+  }, [])
+  // const [isFillingFormDone, setFillingFormDone] = useState(false);
   return (
     <div className="App">
-      {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm  setFillingForm={ setFillingFormDone }/> : <Signup setIsSignup={setIsSignup}/>}
+      {/* {isSignup === undefined ? <SimpleBackdrop handleClose={true} /> : isSignup ? <FillingForm /> : <Signup />} */}
+      {/* <ManageFundLanding /> */}
+      {isSignup ? <FillingForm /> : <Signup setIsSignup={setIsSignup} />}
     </div>
   );
 }
 
-export default Rahul;
+// {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm setFillingForm={setFillingFormDone} /> : <Signup setIsSignup={setIsSignup} />}
