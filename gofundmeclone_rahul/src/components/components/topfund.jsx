@@ -33,6 +33,11 @@ export default function TopFund({ children }) {
             font-size: .875rem;
             font-weight: 900;
             text-transform: uppercase;
+            a {
+              text-decoration:none;
+              color: #02a95c;
+            }
+            
           }
           h4{
             padding-bottom:10px;

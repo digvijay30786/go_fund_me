@@ -9,6 +9,7 @@ import SourceFund from './sourcefunding';
 import Footer from './Footer';
 import Appstore from './appstore';
 import { Line} from 'rc-progress';
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const Fund = styled.div`
@@ -34,13 +35,13 @@ export default function Main() {
       <Fund>
         <h1>Top fundraisers</h1>
         <TopFund>
-           {/* First Div */}
+          {/* First Div */}
           <div>
             <div>
               <img src="https://images.gofundme.com/-VSy-_w-So4zxcy-Qm_dgsq-dko=/720x405/https://d2g8igdw686xgo.cloudfront.net/58569821_1626720290962865_r.jpeg" />
             </div>
             <div className="details">
-              <span>Irvine, CA</span>
+              <span><Link to='/fundraiser'>Irvine, CA</Link></span>
               <h4>{"Support Katie DiSimone and her family".substring(0, 24) + "..."}</h4>
               <p>{"Hi, my name is Kate Farnsworth, and I have created this go fund me to raise".substring(0, 60) + "..."}</p>
               <p className="time">Last donation 7m ago</p>
@@ -104,7 +105,7 @@ export default function Main() {
             <p>Start a GoFundMe to raise money to help yourself and others during this difficult time. Read our blog post <a href="">Fundraising for Coronavirus Relief: How You Can Help the Fight</a> for more information.</p>
           </div>
         </div>
-        <button>Start a GoFundMe</button>
+        <Link to='/signup'><button>Start a GoFundMe</button></Link>
       </Trending>
       < MyCarousel></MyCarousel>
       <SourceFund>
@@ -159,7 +160,7 @@ export default function Main() {
           </div>
         </div>
           <div className="drip">
-            <button>Start a GoFundMe</button>
+            <Link to='/signup'><button>Start a GoFundMe</button></Link>
           </div>
       </SourceFund>
       <Appstore>

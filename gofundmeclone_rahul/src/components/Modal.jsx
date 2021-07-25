@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 
-import YoutubeEmbed from "./YoutubeEmbed";
+import YoutubeEmbed from "./components/YoutubeEmbed";
 
 const Background = styled.div`
   width: 100%;

@@ -1,6 +1,6 @@
 import styles from "./SignupCss.module.css";
 import { Navbar } from "./NavBar";
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import { InputAdornments } from './InputFieldsComponents/PasswordField';
 ////material ui stuff
@@ -25,14 +25,6 @@ export function Signin() {
                           <div className={styles.first}>
                               <div className={styles.align}><FacebookIcon style={{ color: "White",fontSize: "30"}}/></div><div className={styles.align}><h3>Continue With Facebook</h3></div>
                           </div>
-                         
-                       
-                         
-                          {/* <TextField
-                            id="outlined-basic"
-                            label="Last name"
-                            variant="outlined"
-                            name="lastName"/> */}
                           </div>
                           <div className={styles.or}>
                               <div className={styles.one}><div></div></div>

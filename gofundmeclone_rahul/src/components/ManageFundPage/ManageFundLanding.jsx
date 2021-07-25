@@ -20,7 +20,7 @@ import { GoDiffAdded } from "react-icons/go";
 ////////////////////////
 import { FundraiserPayment } from "./FundraiserPayment";
 
-import { TransitionsModal } from "../Modal";
+import { Modal } from "../Modal";
 import { ContainedButtons } from "../Button";
 import { CheckboxLabels } from "../CheckBox";
 ////////////////////////////////////////////////////////////////////////// material  components
@@ -208,7 +208,7 @@ function UpdatesTab() {
           })}
         </>
       )}
-      <TransitionsModal handleModal={handleModal}>
+      <Modal handleModal={handleModal}>
         <StyledPopup>
           <header>
             <h3>Post an update</h3>
@@ -234,7 +234,7 @@ function UpdatesTab() {
             </div>
           </section>
         </StyledPopup>
-      </TransitionsModal>
+      </Modal>
     </>
   );
 }

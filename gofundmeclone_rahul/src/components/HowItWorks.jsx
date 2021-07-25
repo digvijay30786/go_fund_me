@@ -1,13 +1,15 @@
 import React from 'react';
-import styles from "./HowItWorks.css";
+import "./HowItWorks.css";
 import { Banner2 } from "./Banner2";
-import { Footer } from './Footer';
-import styled from "styled-components";
+import  Menu from "./components/menu";
+import  Footer  from './components/Footer';
 
 
-export const HowItWorks = () => {
+export default function HowItWorks() {
     return (
-        <div>
+
+        <div className="mainWorks">
+            <Menu/>
             <div className="firstdiv">
                 <h1>How GoFundMe Works</h1>
                 <p>GoFundMe is the best place to fundraise, whether you are an individual, group, or organization.</p>
@@ -18,15 +20,15 @@ export const HowItWorks = () => {
                 <div className="th1">
                     
                 
-                      <div className="green-circle">1</div>
-<h3><span className="heading-3">Start your fundraiser</span></h3>
-<ul>
-<li>Set your fundraiser goal</li>
-<li>Tell your story</li>
-<li>Add a picture or video</li>
-</ul>
-<p><a href="https://www.youtube.com/watch?v=Dcf4H8fchbE&amp;feature=youtu.be" target="_blank" rel="noopener">Watch video</a></p>
-                </div>
+<div className="green-circle">1</div>
+            <h3><span className="heading-3">Start your fundraiser</span></h3>
+            <ul>
+            <li>Set your fundraiser goal</li>
+            <li>Tell your story</li>
+            <li>Add a picture or video</li>
+            </ul>
+            <p><a href="https://www.youtube.com/watch?v=Dcf4H8fchbE&amp;feature=youtu.be" target="_blank" rel="noopener">Watch video</a></p>
+</div>
                 
                 <div className="th2">
 <div className="green-circle">2</div>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Modal } from "./Modal";
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -74,7 +74,7 @@ export default function Banner() {
           <p>Get Started Today.</p>
           <div className="panel">
             <div>
-              <a href="#">Start a GoFundMe</a>
+              <Link to='/signup'>Start a GoFundMe</Link>
             </div>
             <div>
               <div className="line"></div>

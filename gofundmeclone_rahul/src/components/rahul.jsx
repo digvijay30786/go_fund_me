@@ -2,7 +2,7 @@ import '../App.css';
 import { Signup } from './Signup'
 import { FillingForm } from './FillingForm/FillingForm';
 import { useState } from 'react';
-import { ManageFundLanding } from './ManageFundPage.jsx/ManageFundLanding';
+import { ManageFundLanding } from './ManageFundPage/ManageFundLanding';
 
 function Rahul() {
   const [isSignup, setIsSignup] = useState(true);
