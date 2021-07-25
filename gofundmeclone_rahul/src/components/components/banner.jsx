@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Modal } from "./Modal";
+import { Modal } from "./ModalYT";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 

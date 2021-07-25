@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Modal } from "./Modal";
+import { Modal } from "./components/ModalYT";
 import React, { useState } from "react";
-
 
 
 
