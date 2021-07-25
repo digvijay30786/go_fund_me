@@ -1,98 +1,43 @@
 {
   "users": [
     {
-      "firstName": "duggu",
-      "lastName": "rajput",
-      "emailAddress": "duggurajput7358@gmail.com",
-      "password": "12345",
-      "id": 1,
-      "myAllFundraiser": [
-        {
-          "basics": {
-            "country": "GB",
-            "postcode": "441 16 - Alingsås, Västra Götal län",
-            "fundReason": "Missions,Faith,Church"
-          },
-          "targetMoney": "",
-          "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
-          "title": "rahul",
-          "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj ",
-          "id": 1,
-          "updates": []
-        }
-      ]
-    },
-    {
-      "firstName": "rahul",
-      "lastName": "rahul",
-      "emailAddress": "rahul@gmail.com",
-      "password": "12341212414142",
-      "id": 2
-    },
-    {
-      "firstName": "rahul",
-      "lastName": "rajput",
-      "emailAddress": "rahulrajput@gmail.com",
-      "password": "12345",
-      "id": 3
-    },
-    {
       "firstName": "Rahul",
       "lastName": "Rajput",
-      "emailAddress": "rahulrajput7358@gmail.com",
+      "emailAddress": "Rahulrajput7358@gmail.com",
       "password": "12345",
-      "id": 4
-    },
-    {
-      "firstName": "rahul",
-      "lastName": "Rajput",
-      "emailAddress": "rahulrajput7358@gmail.com",
-      "password": "12345",
-      "id": 5
+      "id": 1
     }
   ],
   "currLoggedIn": {
-    "firstName": "rahul",
+    "firstName": "Rahul",
     "lastName": "Rajput",
-    "emailAddress": "rahulrajput7358@gmail.com",
+    "emailAddress": "Rahulrajput7358@gmail.com",
     "password": "12345"
   },
   "myAllFundraiser": [
     {
       "basics": {
         "country": "GB",
-        "postcode": "441 16 - Alingsås, Västra Götal län",
-        "fundReason": "Missions,Faith,Church"
-      },
-      "targetMoney": "",
-      "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
-      "title": "rahul",
-      "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj ",
-      "id": 1
-    },
-    {
-      "basics": {
-        "country": "GB",
-        "postcode": "441 16 - Alingsås, Västra Götal län",
+        "postcode": "441 17 - Alingsås, Västra Götal län",
         "fundReason": "Weddings,Honeymoons"
       },
       "targetMoney": "1000",
-      "img": "blob:http://localhost:3000/88817af8-eaa5-4675-b5bd-9f10bb75169c",
+      "img": "blob:http://localhost:3000/1408a84f-0030-4904-97db-b093ce04e940",
       "title": "rahul",
-      "story": "12121212 wssdf sdf df sdf sdf sdf sdf sdf sdf sdf sdf sdf ",
-      "id": 2
+      "story": "i am broke djkfdjkfjkld fkdjfk dkfjkdjf kdfkdjkfjdkfj df df df",
+      "id": 1
     }
   ],
   "myCurrFundraiser": {
     "basics": {
       "country": "GB",
-      "postcode": "441 16 - Alingsås, Västra Götal län",
+      "postcode": "441 17 - Alingsås, Västra Götal län",
       "fundReason": "Weddings,Honeymoons"
     },
     "targetMoney": "1000",
-    "img": "blob:http://localhost:3000/88817af8-eaa5-4675-b5bd-9f10bb75169c",
+    "img": "blob:http://localhost:3000/1408a84f-0030-4904-97db-b093ce04e940",
     "title": "rahul",
-    "story": "12121212 wssdf sdf df sdf sdf sdf sdf sdf sdf sdf sdf sdf "
+    "story": "i am broke djkfdjkfjkld fkdjfk dkfjkdjf kdfkdjkfjdkfj df df df"
   },
   "currUpdates": []
 }

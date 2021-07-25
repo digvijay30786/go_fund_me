@@ -2,7 +2,7 @@ import Main from "./components/components/main";
 import Works from './components/components/works'
 import { Rahul } from './components/rahul';
 import { Switch, Route } from "react-router-dom";
-import {ManageFundLanding} from './components/ManageFundPage.jsx/ManageFundLanding'
+import {ManageFundLanding} from './components/ManageFundPage/ManageFundLanding'
 // import SetTargetForm from './components/FillingForm/FillingForm'
 export default function App() {
 
