@@ -52,7 +52,7 @@ export default function Donate() {
     
       async function handleToken(token, addresses) {
           const response = await axios.post(
-              "http://localhost:3001/payment",
+              "http://localhost:3002/payment",
               { token, product }
           ).then(({ data }) => {
               console.log(data.token);

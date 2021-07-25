@@ -3,9 +3,9 @@ import Works from './components/components/works'
 import {ManageFundLanding} from './components/ManageFundPage/ManageFundLanding'
 import HowItWorks from './components/HowItWorks';
 import { FundraiserPayment } from './components/ManageFundPage/FundraiserPayment';
-import Rahul from './components/rahul';
+import {Rahul} from './components/rahul';
 import Donate from './components/components/donate';
-import { Signup } from './components/Signup';
+// import { Signup } from './components/Signup';
 import { Signin }  from './components/Signin';
 import {Switch,Route} from "react-router-dom";
 
@@ -20,7 +20,7 @@ export default function App() {
       <Route path='/fundraiser' component={FundraiserPayment} />
       <Route path='/singin' component={Signin} />
       <Route path='/donate' component={Donate} />
-      <Route path='/signup' component={Signup} />
+      {/* <Route path='/signup' component={Signup} /> */}
     </Switch>
   );
 }

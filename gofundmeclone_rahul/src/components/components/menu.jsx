@@ -173,7 +173,7 @@ export default function Menu() {
       </ImgDiv>
       <nav><Link to='/works' className="link">How its Work</Link></nav>
       <nav><Link to='/singin' className="link">Signin</Link></nav>
-      <Link to='/signup'><FundmeBtn>Start a GoFundMe</FundmeBtn></Link>
+      <Link to='/rahul'><FundmeBtn>Start a GoFundMe</FundmeBtn></Link>
     </Header>
   );
 }
