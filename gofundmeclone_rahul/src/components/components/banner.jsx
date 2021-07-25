@@ -15,9 +15,10 @@ export default function Banner() {
     grid-template-columns: 70%;
     .font {
       padding-top: 100px;
-      padding-left: 50px;
+      padding-left: 110px;
       font-family: sans-serif;
       h1 {
+        width:60%;
         font-weight: 900;
         font-size: 35px;
         line-height: 3rem;

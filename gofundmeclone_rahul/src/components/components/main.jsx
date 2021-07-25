@@ -10,17 +10,21 @@ import Footer from './Footer';
 import Appstore from './appstore';
 import { Line} from 'rc-progress';
 import { Link } from "react-router-dom";
+import StartFund from "./startFund";
 
 export default function Main() {
   const Fund = styled.div`
     width: 80%;
-    margin: auto;
+    
     min-height: 300px;
-    margin-top: 30px;
+    
+    margin:30px auto;
     font-family: sans-serif;
     padding: 30px;
+    
     h1{
       font-size:25px;
+     
     }
    .seemore{
      display:flex;
@@ -229,6 +233,13 @@ export default function Main() {
           {/* Third Div End*/}
         </TopFund>
       </Fund>
+       <StartFund>
+        <div className="drip">
+          <p>Ready to start fundraising?</p>
+
+          <button>Start a GoFundMe</button>
+        </div>
+      </StartFund>
       <Footer/>
     </div>
   );

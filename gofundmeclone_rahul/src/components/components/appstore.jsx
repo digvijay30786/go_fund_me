@@ -14,7 +14,7 @@ export default function Appstore({ children })
         column-gap: 10px;
         justify-content:center;
         height:350px;
-        width: 45rem;
+        width: 60rem;
         .pic{
             width:100%;
         }
