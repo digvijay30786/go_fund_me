@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Banner() {
   const Div = styled.div`
     margin-top: 100px;
-    height: 400px;
+    height: 500px;
     background-image: url(https://i.imgur.com/mNPyAcA.png);
     background-position: 50% center;
     display: grid;
@@ -23,6 +23,7 @@ export default function Banner() {
         font-size: 35px;
         line-height: 3rem;
         color: #333;
+        width: 550px;
       }
       p {
         margin-top: 1rem;
@@ -83,20 +84,20 @@ export default function Banner() {
             <div className="play">
               <div>
                 <img src="https://imgur.com/slBYImy.png" width="50px" onClick={openModal} />
-               <Modal showModal={showModal} setShowModal={setShowModal} />
-                
+                <Modal showModal={showModal} setShowModal={setShowModal} />
+
               </div>
               <div>
                 <h3>See how GoFundMe works</h3>
               </div>
-                 
+
             </div>
           </div>
-        
+
         </div>
-         
+
       </Div>
-      
+
     </>
   );
 }

@@ -1,17 +1,29 @@
 import '../App.css';
 import { Signup } from './Signup'
 import { FillingForm } from './FillingForm/FillingForm';
-import { useState } from 'react';
-import { ManageFundLanding } from './ManageFundPage/ManageFundLanding';
 
-function Rahul() {
-  const [isSignup, setIsSignup] = useState(true);
-  const [isFillingFormDone , setFillingFormDone] = useState(true);
-  return (
-    <div className="App">
-      {isFillingFormDone ? <ManageFundLanding /> : isSignup ? <FillingForm  setFillingForm={ setFillingFormDone }/> : <Signup setIsSignup={setIsSignup}/>}
-    </div>
-  );
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+
+async function checkUserLoggedInOrNot() {
+  let res = await axios.get('http://localhost:3001/currLoggedIn');
+  if (Object.keys(res.data).length === 0) {
+    return false;
+  }
+  return true;
 }
 
-export default Rahul;
+export function Rahul() {
+  const [isSignup, setIsSignup] = useState();
+  useEffect(() => {
+    checkUserLoggedInOrNot().then((res) => {
+      setIsSignup(res);
+    })
+  }, [])
+  return (
+    <div className="App">
+      {isSignup ? <FillingForm /> : <Signup setIsSignup={setIsSignup} />}
+    </div>
+  );
+};

@@ -3,16 +3,16 @@ import { Navbar } from "./NavBar";
 import { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
-// import { InputAdornments } from './InputFieldsComponents/PasswordField';
 ////material ui stuff
 import React from "react";
-
 import TextField from "@material-ui/core/TextField";
 import { SimpleBackdrop } from "./Loading";
+import SimpleAlerts from './Alert'
 
 export function Signup({ setIsSignup }) {
   const [signupData, setSignupData] = useState();
   const [startLoading, setStartLoading] = useState(false);
+  const [error, setError] = useState();
   //updated the signupdate on change of input
   const updateData = (e) => {
     const { name, value } = e.target;
@@ -23,27 +23,39 @@ export function Signup({ setIsSignup }) {
     setSignupData(payload);
   };
   function validateSignupData() {
-    return true;
+    if (signupData === undefined) {
+      setError('Please fill your information for signup')
+    } else if (signupData.firstName === undefined || signupData.firstName === '') {
+      setError('Please fill your information for first name')
+    } else if (signupData.lastName === undefined || signupData.lastName === '') {
+      setError('Please fill your information for last name')
+    } else if (signupData.emailAddress === undefined || signupData.emailAddress === '') {
+      setError('Please fill your information for email')
+    } else if (signupData.password === undefined || signupData.password === '') {
+      setError('Please fill your information for password')
+    } else {
+      return true;
+    }
   }
   const signup = (e) => {
-    setStartLoading(true);
     e.preventDefault();
     if (validateSignupData()) {
-      axios
-        .post("http://localhost:3001/signupData", signupData)
-        .then((res) => {
-          ////open the filling form
-          setStartLoading(true);
-          setIsSignup(true);
-        })
-        .catch((err) => {
+       setStartLoading(true);
+      let promise2 =axios.post("http://localhost:3001/currLoggedIn", signupData)
+      let promise1 = axios.post("http://localhost:3001/users", signupData)
+      
+      Promise.all([promise1, promise2]).then((res) => {
+        setStartLoading(true);
+        setIsSignup(true);
+      }).catch((err) => {
           console.log(err);
-        });
+      });
     }
   };
   return (
     <>
       <Navbar />
+      {error !== undefined && <SimpleAlerts message={ error }/>}
       <div className={styles.signup}>
         <div className={styles.signupHeader}>
           <h1>Sign up</h1>
@@ -105,4 +117,28 @@ const StyledTextField = styled(TextField)`
   input {
     width: 430px;
   }
+  
 `;
+// function validateMail(str) {
+//   let regex =
+//     /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-zA-Z]{2,10})(.[A-Za-z]{2,10})$/;
+//   return regex.test(str);
+// }
+// function validateMobile(str) {
+//   let regex = /^[0-9]{10}$/;
+//   return regex.test(str);
+// }
+// function validatePassword(str) {
+//   return str.length > 5 ? true : false;
+// }
+// function validateName(str) {
+//   str = str.trim();
+//   let regex = /^[a-zA-Z]+$/;
+//   if (!regex.test(str)) return false;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == " ") {
+//       return false;
+//     }
+//   }
+//   return true;
+// }

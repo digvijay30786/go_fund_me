@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { useState, react } from "react";
+
 import Footer from '../components/Footer';
 import Menu  from '../components/menu'
 import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { Link } from "react-router-dom";
+
 const StyledDonateNowCard = styled.div`
   width: 320px;
   height: 400px;
@@ -61,13 +63,17 @@ const StyledDonateNowCard = styled.div`
 function DonateNowCard() {
   return (
     <StyledDonateNowCard>
+
       <h2>$310,733 <span>raised of $350,000 goal</span></h2>
+
       <LinearDeterminate />
       <button>
         <ShareSvg /> <span> Share </span>{" "}
       </button>
       <button>
+
         <DonateNowSvg /><span><Link to='/donate' style = {{textDecoration:'none'}}>Donate now</Link></span>
+
       </button>
       <div style={{ display: "flex" }}>
         <img
@@ -111,6 +117,7 @@ const FundPreview = styled.div`
   }
   & > h1 {
     margin: 20px 0;
+
     margin-top:100px;
   }
   & > div {
@@ -185,6 +192,7 @@ const FundPreviewOtherOptions = styled.div`
 
 `
 export function FundraiserPayment() {
+
   const mystyle = {
     
     flexDirection: 'column',
@@ -199,6 +207,7 @@ export function FundraiserPayment() {
         <h1>Support Katie DiSimone and her family</h1>
         <img
           src="https://images.gofundme.com/-VSy-_w-So4zxcy-Qm_dgsq-dko=/720x405/https://d2g8igdw686xgo.cloudfront.net/58569821_1626720290962865_r.jpeg"
+
           alt=""
         />
         <div>
@@ -218,6 +227,7 @@ export function FundraiserPayment() {
             </p>
           </div>
           <div className="fundDetails" style={ mystyle}>
+
             <p>
               Hello how do u do? this is just for educational purpose please
               dont block me i am just cloning this website ... because it was
@@ -227,7 +237,6 @@ export function FundraiserPayment() {
               Hello how do u do? this is just for educational purpose please
               dont block me i am just cloning this website ... because it was
               given us a project .....
-
             </p>
           </div>
           <DonateNowCard />
@@ -302,6 +311,7 @@ export function FundraiserPayment() {
           </div>
           
       </FundPreviewOtherOptions>
+
       <NowCard></NowCard>
       <Nfundadvice></Nfundadvice>
       <Footer></Footer>
