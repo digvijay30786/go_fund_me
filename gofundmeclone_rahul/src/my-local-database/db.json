@@ -5,7 +5,22 @@
       "lastName": "rajput",
       "emailAddress": "duggurajput7358@gmail.com",
       "password": "12345",
-      "id": 1
+      "id": 1,
+      "myAllFundraiser": [
+        {
+          "basics": {
+            "country": "GB",
+            "postcode": "441 16 - Alingsås, Västra Götal län",
+            "fundReason": "Missions,Faith,Church"
+          },
+          "targetMoney": "",
+          "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
+          "title": "rahul",
+          "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj ",
+          "id": 1,
+          "updates": []
+        }
+      ]
     },
     {
       "firstName": "rahul",
@@ -13,13 +28,34 @@
       "emailAddress": "rahul@gmail.com",
       "password": "12341212414142",
       "id": 2
+    },
+    {
+      "firstName": "rahul",
+      "lastName": "rajput",
+      "emailAddress": "rahulrajput@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "firstName": "Rahul",
+      "lastName": "Rajput",
+      "emailAddress": "rahulrajput7358@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "firstName": "rahul",
+      "lastName": "Rajput",
+      "emailAddress": "rahulrajput7358@gmail.com",
+      "password": "12345",
+      "id": 5
     }
   ],
   "currLoggedIn": {
     "firstName": "rahul",
-    "lastName": "rahul",
-    "emailAddress": "rahul@gmail.com",
-    "password": "12341212414142"
+    "lastName": "Rajput",
+    "emailAddress": "rahulrajput7358@gmail.com",
+    "password": "12345"
   },
   "myAllFundraiser": [
     {

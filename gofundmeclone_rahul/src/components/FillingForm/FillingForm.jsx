@@ -318,7 +318,7 @@ function AddPhoto({ setStepCount, setStartLoading, setMyFundraiser }) {
         acceptedFiles.map((file) =>
           Object.assign(file, {
             preview: URL.createObjectURL(file),
-          })
+          }),   
         )
       );
     },
