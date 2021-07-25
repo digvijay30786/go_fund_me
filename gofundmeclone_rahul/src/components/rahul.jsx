@@ -1,8 +1,10 @@
 import '../App.css';
 import { Signup } from './Signup'
 import { FillingForm } from './FillingForm/FillingForm';
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+
 
 async function checkUserLoggedInOrNot() {
   let res = await axios.get('http://localhost:3001/currLoggedIn');

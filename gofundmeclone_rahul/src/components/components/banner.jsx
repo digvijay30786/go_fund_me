@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Modal } from "./Modal";
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -15,9 +15,10 @@ export default function Banner() {
     grid-template-columns: 70%;
     .font {
       padding-top: 100px;
-      padding-left: 50px;
+      padding-left: 110px;
       font-family: sans-serif;
       h1 {
+        width:60%;
         font-weight: 900;
         font-size: 35px;
         line-height: 3rem;
@@ -75,7 +76,7 @@ export default function Banner() {
           <p>Get Started Today.</p>
           <div className="panel">
             <div>
-              <a href="#">Start a GoFundMe</a>
+              <Link to='/signup'>Start a GoFundMe</Link>
             </div>
             <div>
               <div className="line"></div>

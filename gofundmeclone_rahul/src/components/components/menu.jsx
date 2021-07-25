@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 import { Switch, Route } from "react-router-dom";
 import { Rahul } from '../rahul';
+
 export default function Menu() {
   const Header = styled.div`
     left: 0;
@@ -142,12 +144,12 @@ export default function Menu() {
           <div class="dropdown">
             <span class="dropbtn">
               Fundraise for
-              <img
-                className="im"
-                src="https://i.imgur.com/TRjqnAS.png"
-                height="16px"
-                width="16px"
-              />
+                  <img
+                    className="im"
+                    src="https://i.imgur.com/TRjqnAS.png"
+                    height="16px"
+                    width="16px"
+                    />
             </span>
             <div class="dropdown-content">
               <a href="#">Medical</a>
@@ -164,11 +166,14 @@ export default function Menu() {
         </DropDown>
       </nav>
       <ImgDiv>
-        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" alt='img' />
+
+      <Link to='/'>
+        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" />
+      </Link>
       </ImgDiv>
       <nav><Link to='/works' className="link">How its Work</Link></nav>
-      <nav>Signin</nav>
-      <Link to="/rahul"><FundmeBtn>Start a GoFundMe</FundmeBtn></Link>
+      <nav><Link to='/singin' className="link">Signin</Link></nav>
+      <Link to='/signup'><FundmeBtn>Start a GoFundMe</FundmeBtn></Link>
     </Header>
   );
 }

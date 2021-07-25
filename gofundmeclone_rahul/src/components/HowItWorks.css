@@ -1,0 +1,122 @@
+.mainWorks {
+  margin-top: 100px;
+}
+.firstdiv h1 {
+  text-align: center;
+  padding: 25px;
+}
+.firstdiv p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+.thirddiv {
+  width: 75%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 20%;
+  margin-right: 12.5%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  background: #fcf8f5;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.thirddiv div div,
+.thirddiv div h3,
+.thirddiv div ul li,
+.thirddiv div p {
+  padding: 11px;
+}
+.thirddiv div h3 span {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.thirddiv div ul li {
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+.thirddiv div p a {
+  text-decoration: none;
+  color: #02a95c;
+  font-size: 18px;
+}
+.green-circle {
+  border: 1px solid #00b964;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #02a95c;
+
+  text-align: center;
+}
+.btn button h2 {
+  padding: 15px;
+  color: white;
+}
+.btn button {
+  background: #02a85c;
+  border: none;
+  width: 23%;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0.3125rem 0.875rem 0.0625rem rgb(0 0 0 / 10%);
+}
+.btn {
+  text-align: center;
+  margin-bottom: 35px;
+  background: #fcf8f5;
+  padding-bottom: 6rem;
+}
+.fifthdiv {
+  text-align: center;
+  background: white;
+  width: 70%;
+  margin: auto;
+  padding: 30px;
+}
+.fifthdiv h1 {
+  padding: 10px;
+}
+.fifthdiv p {
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  line-height: 50px;
+}
+.fifthdiv button {
+  padding: 15px;
+  font-size: 18px;
+  width: 22.5%;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  background: white;
+  color: #02a85c;
+  outline-style: #02a85c;
+  border: 2px solid #02a85c;
+  border-radius: 10px;
+}
+.sixthdiv {
+  width: 65%;
+  margin: auto;
+  text-align: center;
+  background: #fcf8f5;
+}
+.sixthdiv p {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  line-height: inherit;
+  font-style: italic;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.sixthdiv img {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+}
+.parent {
+  background: #fcf8f5;
+}

@@ -7,12 +7,14 @@ export default function Appstore({ children })
        padding-right:10%;
        padding-left:10%;
        width:80%;
+       margin:auto;
        .play
        {
         display:flex;
         column-gap: 10px;
         justify-content:center;
         height:350px;
+        width: 60rem;
         .pic{
             width:100%;
         }

@@ -7,12 +7,15 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import styles from "./style.module.css";
+
 import Menu from '../components/menu';
 import Footer from '../components/Footer';
 import LongMenu from './Triangle'
 import { v4 as uuid } from 'uuid';
+
 // importing icons
-import { BsPencil, BsThreeDotsVertical, BsUpload } from "react-icons/bs";
+import { BsPencil ,BsThreeDotsVertical ,BsUpload} from "react-icons/bs";
+
 import {
   AiOutlineEye,
   AiOutlineBank,
@@ -25,6 +28,7 @@ import { GoDiffAdded } from "react-icons/go";
 import { FundraiserPayment } from "./FundraiserPayment";
 
 import { TransitionsModal } from "../Modal";
+
 import { ContainedButtons } from "../Button";
 import { CheckboxLabels } from "../CheckBox";
 ////////////////////////////////////////////////////////////////////////// material  components
@@ -52,6 +56,7 @@ function LinearDeterminate() {
 
 ///////////////////////////////////////////////////////////////////////////
 function TopView() {
+
   let [currFundraiser, setCurrFundraiser] = useState();
   console.log(currFundraiser)
   useEffect(() => {
@@ -141,6 +146,7 @@ function TeamTab() {
 }
 
 function UpdatesTab() {
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   
   const handleClick = (event) => {
@@ -150,12 +156,14 @@ function UpdatesTab() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   const [updateMessages, setUpdateMessages] = useState();
   const [handleModal, setHandleModal] = useState(false);
   const [isError, setIsError] = useState(false);
   const [textAreaVal, setTextAreaVal] = useState();
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
+
   async function fetchData() {
     let promise1 = await axios.get("http://localhost:3001/currUpdates");
     let promise2 = await axios.get("http://localhost:3001/currLoggedIn");
@@ -169,7 +177,7 @@ function UpdatesTab() {
     fetchData();
   }, []);
   function postMessage() {
-    setHandleModal(!handleModal)
+     setHandleModal(!handleModal)
     let payload = {
       message: textAreaVal,
       firstname: firstName,
@@ -191,7 +199,6 @@ function UpdatesTab() {
       fetchData();
     })
   }
-  console.log('updateMessages', updateMessages );
   return (
     <>
       {updateMessages === undefined ? (
@@ -248,6 +255,7 @@ function UpdatesTab() {
           })}
         </>
       )}
+
       <TransitionsModal handleModal={handleModal}>
         <StyledPopup>
           <header>
@@ -275,6 +283,7 @@ function UpdatesTab() {
           </section>
         </StyledPopup>
       </TransitionsModal>
+
     </>
   );
 }
@@ -283,6 +292,7 @@ function UpdateArea() {
   const [donors, setDonors] = useState(false);
   const [team, setTeam] = useState(false);
   const [updates, setUpdates] = useState(true);
+
   function switc(para) {
     if (para === 'Donors') {
       setDonors(true);
@@ -292,6 +302,7 @@ function UpdateArea() {
       setDonors(false);
       setTeam(true);
       setUpdates(false);
+
     } else if (para === 'updates') {
       setDonors(false);
       setTeam(false);
@@ -323,7 +334,6 @@ export function ManageFundLanding() {
       <UpdateArea />
       {/* <FundraiserPayment /> */}
       <Footer />
-
     </>
   );
 }
@@ -332,6 +342,7 @@ export function ManageFundLanding() {
 
 const StyledTopView = styled.div`
   display: flex;
+
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 100px 0px;
   justify-content: space-between;
   align-items: center;
@@ -359,6 +370,7 @@ const StyledTopView = styled.div`
     justify-content: space-between;
     color: gray;
     text-decoration: underline;
+
     // border:1px solid lime;
     width:250px;
   }
