@@ -69,18 +69,30 @@
       "title": "rahul",
       "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj ",
       "id": 1
+    },
+    {
+      "basics": {
+        "country": "GB",
+        "postcode": "441 16 - Alingsås, Västra Götal län",
+        "fundReason": "Weddings,Honeymoons"
+      },
+      "targetMoney": "1000",
+      "img": "blob:http://localhost:3000/88817af8-eaa5-4675-b5bd-9f10bb75169c",
+      "title": "rahul",
+      "story": "12121212 wssdf sdf df sdf sdf sdf sdf sdf sdf sdf sdf sdf ",
+      "id": 2
     }
   ],
   "myCurrFundraiser": {
     "basics": {
       "country": "GB",
       "postcode": "441 16 - Alingsås, Västra Götal län",
-      "fundReason": "Missions,Faith,Church"
+      "fundReason": "Weddings,Honeymoons"
     },
-    "targetMoney": "",
-    "img": "blob:http://localhost:3000/d990ce42-1e47-4333-90e6-98e605583d5a",
+    "targetMoney": "1000",
+    "img": "blob:http://localhost:3000/88817af8-eaa5-4675-b5bd-9f10bb75169c",
     "title": "rahul",
-    "story": "sdhsjd sjdhjsdhjshdjhd jsdj s djs dhjs djs djsjd sj "
+    "story": "12121212 wssdf sdf df sdf sdf sdf sdf sdf sdf sdf sdf sdf "
   },
   "currUpdates": []
 }
