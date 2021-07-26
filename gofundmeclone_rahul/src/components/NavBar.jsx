@@ -3,7 +3,7 @@ import styles from './SignupCss.module.css'
 import { Link } from "react-router-dom";
 
 
-export function Navbar() { 
+export function Navbar({para, link, linkVal}) { 
     return <header className={styles.header}>
         <nav>
             <Link to=''>
@@ -12,7 +12,7 @@ export function Navbar() {
             </div>
             </Link>
             <div>
-                Already have an account? <Link to='/singin'>Sign in</Link>
+                {para}<Link to = {link}>{linkVal }</Link>
             </div>
         </nav>
     </header>

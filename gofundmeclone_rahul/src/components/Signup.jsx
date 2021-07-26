@@ -54,7 +54,7 @@ export function Signup({ setIsSignup }) {
   };
   return (
     <>
-      <Navbar />
+      <Navbar para={"Already have an account?"} link={'/singin'} linkVal={'signin' }/>
       {error !== undefined && <SimpleAlerts message={ error }/>}
       <div className={styles.signup}>
         <div className={styles.signupHeader}>

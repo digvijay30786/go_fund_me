@@ -1,17 +1,17 @@
 {
   "users": [
     {
-      "firstName": "rahul",
-      "lastName": "rajput",
-      "emailAddress": "rahulrajp@gmail.com",
+      "firstName": "Rahul",
+      "lastName": "Rajput",
+      "emailAddress": "rahulrajput7358@gmail.com",
       "password": "12345",
       "id": 1
     }
   ],
   "currLoggedIn": {
-    "firstName": "rahul",
-    "lastName": "rajput",
-    "emailAddress": "rahulrajp@gmail.com",
+    "firstName": "Rahul",
+    "lastName": "Rajput",
+    "emailAddress": "rahulrajput7358@gmail.com",
     "password": "12345"
   },
   "myAllFundraiser": [

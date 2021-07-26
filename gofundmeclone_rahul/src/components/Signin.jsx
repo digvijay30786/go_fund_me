@@ -10,11 +10,48 @@ import TextField from "@material-ui/core/TextField";
 import { SimpleBackdrop } from "./Loading";
 import  FacebookIcon  from '@material-ui/icons/Facebook';
 
+import { useState } from 'react'
+
+import axios from "axios"
+
+async function fetchUsers() {
+
+  try {
+    let res = await axios.get('http://localhost:3001/users');
+    return res.data;
+  } catch (err) {
+    alert('404 error');
+  }
+}
 export function Signin() {
- 
+  const [signIn, setSignIn] = useState();
+  const [startLoading, setStartLoading] = useState(false);
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    let payload = {
+      ...signIn,
+      [name]: value
+    }
+    setSignIn(payload);
+  }
+  const signInUser = (e) => {
+    e.preventDefault();
+    setStartLoading(true);
+    fetchUsers().then((res) => {
+      setStartLoading(false);
+      for (let i = 0; i < res.length; i++) {
+        if (res[i].emailAddress=== signIn.emailAddress && res[i].password === signIn.password) {
+          // updateCurrLoggedIn()
+          
+        } else {
+          alert('something went wrong')
+        }
+      }
+    })
+  }
   return (
     <>
-      <Navbar />
+      <Navbar para={"don't have any accont?"} link={'/rahul'} linkVal={'signup' }/>
       <div className={styles.signup}>
         <div className={styles.signupHeader}>
           <h1>Sign In</h1>
@@ -37,7 +74,9 @@ export function Signin() {
                          id="outlined-basic"
                         label="Email address"
                            variant="outlined"
-                          name="emailAddress" />
+                            name="emailAddress"
+                            onChange = {handleChange}  
+                          />
                       </div>
                        
                       <div className={styles.email}>
@@ -47,10 +86,12 @@ export function Signin() {
                       type="password"
                       autoComplete="current-password"
                       variant="outlined"
-                      name="password"/>
+                        name="password"
+                        onChange = {handleChange}  
+                      />
                       </div>
                      
-            <button className={styles.gobutton}>Sign in to GoFundMe</button>
+            <button className={styles.gobutton} onClick = {signInUser}>Sign in to GoFundMe</button>
           </form>
         </div>
         <div class={styles.signinFooter}>
@@ -59,7 +100,7 @@ export function Signin() {
           </p>
         </div>
       </div>
-      <SimpleBackdrop/>
+      <SimpleBackdrop handleClose={startLoading}/> 
     </>
   );
 }
