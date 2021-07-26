@@ -22,6 +22,7 @@ export function Rahul() {
       setIsSignup(res);
     })
   }, [])
+  
   return (
     <div className="App">
       {isSignup ? <FillingForm /> : <Signup setIsSignup={setIsSignup} />}
