@@ -58,10 +58,10 @@ export default function MyCarousel()
         {
             resolve: arrowsPlugin,
             options: {
-                arrowLeft: <img className="rotate" src="https://imgur.com/gDHdl3m.png" width="50px"/>,
-              arrowLeftDisabled:<img className="rotate" src="https://imgur.com/gDHdl3m.png" width="50px"/>,
-              arrowRight: <img src="https://imgur.com/gDHdl3m.png" width="50px"/>,
-              arrowRightDisabled: <img src="https://imgur.com/gDHdl3m.png" width="50px"/>,
+                arrowLeft: <img className="rotate" src="https://imgur.com/gDHdl3m.png" alt="GofundMe" width="50px"/>,
+              arrowLeftDisabled:<img className="rotate" src="https://imgur.com/gDHdl3m.png" alt="GofundMe" width="50px"/>,
+              arrowRight: <img src="https://imgur.com/gDHdl3m.png" width="50px" alt="GofundMe"/>,
+              arrowRightDisabled: <img src="https://imgur.com/gDHdl3m.png" alt="GofundMe" width="50px"/>,
               addArrowClickHandler: true,
             }
           }
@@ -84,7 +84,7 @@ export default function MyCarousel()
                 <i>"My GoFundMe made me feel really happy because I really always wanted to help the community. I'm a great helper, and my friends are, too."</i>
                 <p>Ashley raised $7k to help homeless people in her community.</p>
             </div>
-            <div><img src="https://imgur.com/vP59JSq.jpg" alt="aa" height="300px" width="100%"/></div>
+            <div><img src="https://imgur.com/vP59JSq.jpg" alt="GofundMe" height="300px" width="100%"/></div>
         </div>
         <div className="slide">
         <div className="CareDetail">
@@ -93,7 +93,7 @@ export default function MyCarousel()
                 <i>"My life has changed forever because of Norma and what happened. It gave me hope again. Changing someone's life will change your own forever."</i>
                 <p>Chris raised $70k to help his neighbor Norma stay in her home.</p>
             </div>
-            <div><img src="https://imgur.com/DxltXs8.jpg" alt="aa" height="300px" width="100%"/></div>
+            <div><img src="https://imgur.com/DxltXs8.jpg" alt="GofundMe" height="300px" width="100%"/></div>
         </div>
     </Carousel>
     </SliderDes>

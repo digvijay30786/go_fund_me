@@ -27,7 +27,7 @@ export default function HowItWorks() {
             <li>Tell your story</li>
             <li>Add a picture or video</li>
             </ul>
-            <p><a href="https://www.youtube.com/watch?v=Dcf4H8fchbE&amp;feature=youtu.be" target="_blank" rel="noopener">Watch video</a></p>
+            <p><a href="https://www.youtube.com/watch?v=Dcf4H8fchbE&amp;feature=youtu.be" target="_blank" rel="noopener noreferrer">Watch video</a></p>
 </div>
                 
                 <div className="th2">
@@ -38,7 +38,7 @@ export default function HowItWorks() {
 <li>Send text messages</li>
 <li>Share on social media</li>
 </ul>
-<p><a href="https://www.youtube.com/watch?v=DWC2ClFUyvI&amp;feature=youtu.be" target="_blank" rel="noopener">Watch video</a></p>
+<p><a href="https://www.youtube.com/watch?v=DWC2ClFUyvI&amp;feature=youtu.be" target="_blank" rel="noopener noreferrer">Watch video</a></p>
             </div>
              
                 <div className="th3">
@@ -67,7 +67,7 @@ export default function HowItWorks() {
             <div className="parent">
             <div className="sixthdiv">
                 <p>“This website rocks! I raised close to $10,000 in less than 48 hours for my nephew’s medical needs, and your customer service was so prompt and helpful.”</p>
-                <img src="https://www.gofundme.com/c/wp-content/uploads/2021/03/monica-s-testimonial1.png?w=112" alt="photo" />
+                <img src="https://www.gofundme.com/c/wp-content/uploads/2021/03/monica-s-testimonial1.png?w=112" alt="GofundMe" />
                 <h4>— Monica S.</h4>
                 <p>raised $16,000 on GoFundMe</p>
             </div>

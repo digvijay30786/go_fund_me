@@ -4,14 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Stepper from "@material-ui/core/Stepper";
 import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
-import StepContent from "@material-ui/core/StepContent";
-import Typography from "@material-ui/core/Typography";
+// import StepContent from "@material-ui/core/StepContent";
+// import Typography from "@material-ui/core/Typography";
 //////////////////////////////////////////////////
 import { Link } from "react-router-dom";
 import styles from "./FillingForm.module.css";
 import styled from "styled-components";
 import { LogoSvg } from "../LogoSVG";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaSistrix } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 import { BiEuro } from "react-icons/bi";
@@ -729,7 +729,8 @@ function getSteps() {
 
 export default function VerticalLinearStepper() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  //const [activeStep, setActiveStep] = React.useState(0);
+  const activeStep = 0;
   const steps = getSteps();
   const StyledStepLabel = styled(StepLabel)`
     .MuiStepIcon-active {

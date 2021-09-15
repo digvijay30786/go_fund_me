@@ -1,5 +1,5 @@
 import Main from "./components/components/main";
-import Works from './components/components/works'
+// import Works from './components/components/works'
 import {ManageFundLanding} from './components/ManageFundPage/ManageFundLanding'
 import HowItWorks from './components/HowItWorks';
 import { FundraiserPayment } from './components/ManageFundPage/FundraiserPayment';

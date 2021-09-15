@@ -56,7 +56,7 @@ export  function Banner2() {
       <Div>
         <div className="font">
               <div>
-                <img src="https://imgur.com/slBYImy.png" width="50px" onClick={openModal} />
+                <img src="https://imgur.com/slBYImy.png" width="50px" onClick={openModal} alt="GofFundMe"/>
                 <Modal showModal={showModal} setShowModal={setShowModal} />  
               </div>
         </div>

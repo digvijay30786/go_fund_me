@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { Switch, Route } from "react-router-dom";
-import { Rahul } from '../rahul';
+// import { Switch, Route } from "react-router-dom";
+// import { Rahul } from '../rahul';
 
 export default function Menu() {
   const Header = styled.div`
@@ -120,8 +120,8 @@ export default function Menu() {
       </nav>
       <nav className="navbar">
         <DropDown>
-          <div class="dropdown">
-            <span class="dropbtn">
+          <div className="dropdown">
+            <span className="dropbtn">
               Discover
               <img
                 className="im"
@@ -131,34 +131,35 @@ export default function Menu() {
                 alt='img'
               />
             </span>
-            <div class="dropdown-content">
-              <a href="#">Fundraisers</a>
-              <a href="#">Success Stories</a>
-              <a href="#">Coronavirus fundraising</a>
+            <div className="dropdown-content">
+              <a href="/">Fundraisers</a>
+              <a href="/">Success Stories</a>
+              <a href="/">Coronavirus fundraising</a>
             </div>
           </div>
         </DropDown>
       </nav>
       <nav>
         <DropDown>
-          <div class="dropdown">
-            <span class="dropbtn">
+          <div className="dropdown">
+            <span className="dropbtn">
               Fundraise for
                   <img
                     className="im"
                     src="https://i.imgur.com/TRjqnAS.png"
                     height="16px"
-                    width="16px"
+                width="16px"
+                alt=""
                     />
             </span>
-            <div class="dropdown-content">
-              <a href="#">Medical</a>
-              <a href="#">Memorials</a>
-              <a href="#">Emergency</a>
-              <a href="#">NonProfit</a>
-              <a href="#">Education</a>
-              <a href="#">Emergency</a>
-              <a href="#" className="end">
+            <div className="dropdown-content">
+              <a href="/">Medical</a>
+              <a href="/">Memorials</a>
+              <a href="/">Emergency</a>
+              <a href="/">NonProfit</a>
+              <a href="/">Education</a>
+              <a href="/">Emergency</a>
+              <a href="/" className="end">
                 See All
               </a>
             </div>
@@ -168,7 +169,7 @@ export default function Menu() {
       <ImgDiv>
 
       <Link to='/'>
-        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" />
+        <img src="https://i.imgur.com/a0FNKDT.png" height="100%" width="100%" alt=""/>
       </Link>
       </ImgDiv>
       <nav><Link to='/works' className="link">How its Work</Link></nav>

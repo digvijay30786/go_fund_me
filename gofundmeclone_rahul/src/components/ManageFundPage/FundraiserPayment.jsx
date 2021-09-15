@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState, react } from "react";
+//import { useState} from "react";
 
 import Footer from '../components/Footer';
 import Menu  from '../components/menu'
@@ -78,7 +78,7 @@ function DonateNowCard() {
       <div style={{ display: "flex" }}>
         <img
           src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-          alt=""
+          alt="GofundMe"
           srcset=""
         />
         <p style={{ paddingLeft: "10px" }}>
@@ -207,14 +207,13 @@ export function FundraiserPayment() {
         <h1>Support Katie DiSimone and her family</h1>
         <img
           src="https://images.gofundme.com/-VSy-_w-So4zxcy-Qm_dgsq-dko=/720x405/https://d2g8igdw686xgo.cloudfront.net/58569821_1626720290962865_r.jpeg"
-
-          alt=""
+          alt="GofundMe"
         />
         <div>
           <div className="fundDetails">
             <img
               src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-              alt=""
+              alt="GofundMe"
               srcset=""
             />
             <p>&nbsp;&nbsp;&nbsp;Rahul Rajput is organising this fundraiser</p>
@@ -248,7 +247,7 @@ export function FundraiserPayment() {
         <div style={{ display: "flex" }}>
           <img
             src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-            alt=""
+            alt="GofundMe"
             srcset=""
           />
           <p style={{ paddingLeft: "10px" }}>
@@ -263,7 +262,7 @@ export function FundraiserPayment() {
             <div  className= 'fade-users-box'style={{ display: "flex" }}>
                 <img
                     src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-                    alt=""
+                    alt="GofundMe"
                     srcset=""
                 />
                 <div className="comment">
@@ -287,7 +286,7 @@ export function FundraiserPayment() {
             <div  className= 'fade-users-box'style={{ display: "flex" }}>
             <img
                 src="https://www.gofundme.com/static/media/DefaultAvatar.4bb188e1d41df75419450a820a958679.svg"
-                alt=""
+                alt="GofundMe"
                 srcset=""
             />
          <div className="comment">
@@ -375,7 +374,8 @@ function LinearDeterminate() {
     }
   `;
   const classes = useStyles();
-  const [progress, setProgress] = useState(10);
+  //const [progress, setProgress] = useState(10);
+  const progress=10;
   return (
     <div className={classes.root}>
       <StyledLinearProgress variant="determinate" value={progress} />
@@ -417,7 +417,7 @@ function NowCard() {
   return (
       <Mreportfund>
         
-       <div><button> <span class="material-icons-outlined">assistant_photo</span>
+       <div><button> <span className="material-icons-outlined">assistant_photo</span>
         Report fundraiser </button>
         </div>
     </Mreportfund>
@@ -483,7 +483,7 @@ function Nfundadvice() {
         
       <div className="mainicon" >
         <div className="iconspic">
-          <div className="logo"><span class="material-icons-outlined">
+          <div className="logo"><span className="material-icons-outlined">
           emoji_events
           </span></div>
           <div className="advicebox">
@@ -493,13 +493,13 @@ function Nfundadvice() {
         </div>
       
         <div className="iconspic">
-           <div className="logo"><img src="https://img.icons8.com/ios/452/handshake-heart.png"></img></div>
+           <div className="logo"><img src="https://img.icons8.com/ios/452/handshake-heart.png" alt="GofundMe"></img></div>
           <div className="advicebox">
             <h2>GoFundMe Guarantee</h2>
             <p>In the unlikely event that something isn’t right, we will work with you to determine if misuse has occurred. Learn more</p>
           </div>
         </div>
-        <div className="iconspic"><div className="logo"><span class="material-icons-outlined">
+        <div className="iconspic"><div className="logo"><span className="material-icons-outlined">
 update
 </span></div>
           <div className="advicebox">

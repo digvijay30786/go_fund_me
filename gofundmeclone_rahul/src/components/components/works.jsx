@@ -46,7 +46,7 @@ export default function Works() {
             <p>GoFundMe is the best place to fundraise, whether you are an individual, group, or organization.</p>
             <div className="banner">
                 <div className="playicon">
-                    <img src="https://imgur.com/tHk05sy.png" width="80px"/>
+                    <img src="https://imgur.com/tHk05sy.png" alt="" style={{width:'80px'}} />
                 </div>
             </div>
         </Works>

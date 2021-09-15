@@ -14,7 +14,7 @@ import LongMenu from './Triangle'
 import { v4 as uuid } from 'uuid';
 
 // importing icons
-import { BsPencil ,BsThreeDotsVertical ,BsUpload} from "react-icons/bs";
+import { BsPencil,BsUpload} from "react-icons/bs";
 
 import {
   AiOutlineEye,
@@ -25,7 +25,7 @@ import {
 
 import { GoDiffAdded } from "react-icons/go";
 ////////////////////////
-import { FundraiserPayment } from "./FundraiserPayment";
+//import { FundraiserPayment } from "./FundraiserPayment";
 
 import { TransitionsModal } from "../Modal";
 
@@ -46,7 +46,8 @@ function LinearDeterminate() {
     }
   `;
   const classes = useStyles();
-  const [progress, setProgress] = React.useState(5);
+  ///const [progress, setProgress] = React.useState(5);
+  const progress=5;
   return (
     <div className={classes.root}>
       <StyledLinearProgress variant="determinate" value={progress} />
@@ -147,19 +148,20 @@ function TeamTab() {
 
 function UpdatesTab() {
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
   
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
   
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   const [updateMessages, setUpdateMessages] = useState();
   const [handleModal, setHandleModal] = useState(false);
-  const [isError, setIsError] = useState(false);
+  //const [isError, setIsError] = useState(false);
+  const isError = false;
   const [textAreaVal, setTextAreaVal] = useState();
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();

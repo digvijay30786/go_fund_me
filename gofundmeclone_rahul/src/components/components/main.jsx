@@ -42,7 +42,7 @@ export default function Main() {
           {/* First Div */}
           <div>
             <div>
-              <img src="https://images.gofundme.com/-VSy-_w-So4zxcy-Qm_dgsq-dko=/720x405/https://d2g8igdw686xgo.cloudfront.net/58569821_1626720290962865_r.jpeg" />
+              <img src="https://images.gofundme.com/-VSy-_w-So4zxcy-Qm_dgsq-dko=/720x405/https://d2g8igdw686xgo.cloudfront.net/58569821_1626720290962865_r.jpeg" alt="GofundMe" />
             </div>
             <div className="details">
               <span><Link to='/fundraiser'>Irvine, CA</Link></span>
@@ -57,7 +57,7 @@ export default function Main() {
            {/* Second Div */}
            <div>
             <div>
-              <img src="https://images.gofundme.com/FjTViIDgE5YW1O2YmqcS8za7qpg=/720x405/https://d2g8igdw686xgo.cloudfront.net/58539675_1626643603550189_r.jpeg" />
+              <img src="https://images.gofundme.com/FjTViIDgE5YW1O2YmqcS8za7qpg=/720x405/https://d2g8igdw686xgo.cloudfront.net/58539675_1626643603550189_r.jpeg" alt="GofundMe" />
             </div>
             <div className="details">
               <span>Bellevue, WA</span>
@@ -73,7 +73,7 @@ export default function Main() {
           {/* Third Div*/}
            <div>
             <div>
-              <img src="https://images.gofundme.com/qlI7k6y7NhPxy8IHHWrfuDlg9pQ=/720x405/https://d2g8igdw686xgo.cloudfront.net/58512895_162648179278676_r.jpeg" />
+              <img src="https://images.gofundme.com/qlI7k6y7NhPxy8IHHWrfuDlg9pQ=/720x405/https://d2g8igdw686xgo.cloudfront.net/58512895_162648179278676_r.jpeg" alt="GofundMe" />
             </div>
             <div className="details">
               <span>Connellsville, PA</span>
@@ -88,7 +88,7 @@ export default function Main() {
         </TopFund>
         <div className="seemore">
           <div><p>See More</p></div>
-          <div><img src="https://imgur.com/AjI4HST.png" width="20px"/></div>
+          <div><img src="https://imgur.com/AjI4HST.png" width="20px" alt="GofundMe" /></div>
         </div>
       </Fund>
 
@@ -96,17 +96,17 @@ export default function Main() {
         <span>TRENDING TOPIC</span>
         <h1>Fundraising for coronavirus relief</h1>
         <div className="mainTrend">
-          <div className="first"><img src="https://imgur.com/QHCYOsa.jpg" height="100%" width="100%"/></div>
+          <div className="first"><img src="https://imgur.com/QHCYOsa.jpg" alt="GofundMe" height="100%" width="100%"/></div>
           <div className="second">
             <p>As COVID-19 continues to spread, more individuals, communities, and entire nations are feeling the impact in their daily lives. Beyond the global health crisis, the coronavirus is having a severe economic impact on individuals, small businesses, and medical organizations.</p>
             <p>The urgent need for medical supplies, basic necessities, and quality healthcare is only increasing as more communities become affected by COVID-19. And with hundreds of thousands of individuals across the globe in quarantine, there is a growing need for financial support.</p>
           </div>
         </div>
         <div className="mainTrend">
-          <div className="first"><img src="https://imgur.com/s8UONNx.jpg" height="100%" width="100%"/></div>
+          <div className="first"><img src="https://imgur.com/s8UONNx.jpg" alt="GofundMe" height="100%" width="100%"/></div>
           <div className="second">
             <p>Thankfully, we all have the power to do something and make a difference. Here at GoFundMe, we're empowering individuals, organizations, and communities to step up in the face of the COVID-19 outbreak and help those who need it most.</p>
-            <p>Start a GoFundMe to raise money to help yourself and others during this difficult time. Read our blog post <a href="">Fundraising for Coronavirus Relief: How You Can Help the Fight</a> for more information.</p>
+            <p>Start a GoFundMe to raise money to help yourself and others during this difficult time. Read our blog post <a href="/">Fundraising for Coronavirus Relief: How You Can Help the Fight</a> for more information.</p>
           </div>
         </div>
         <Link to='/signup'><button>Start a GoFundMe</button></Link>
@@ -116,7 +116,7 @@ export default function Main() {
         <h1>The leader in online fundraising</h1>
         <div className="sourceClass">
           <div className="flexImg">
-            <div><img src="https://imgur.com/TGdWYJZ.png" width="38px"/></div>
+            <div><img src="https://imgur.com/TGdWYJZ.png" width="38px" alt="GofundMe" /></div>
             <div>
               <h5>Worldwide leader</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -124,7 +124,7 @@ export default function Main() {
           </div>
 
           <div className="flexImg">
-            <div><img src="https://imgur.com/E19g3FC.png" width="38px"/></div>
+            <div><img src="https://imgur.com/E19g3FC.png" alt="GofundMe" width="38px"/></div>
             <div>
               <h5>Simple setup</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -132,7 +132,7 @@ export default function Main() {
           </div>
 
            <div className="flexImg">
-            <div><img src="https://imgur.com/Ocp8J5P.png" width="38px"/></div>
+            <div><img src="https://imgur.com/Ocp8J5P.png" alt="GofundMe" width="38px"/></div>
             <div>
               <h5>Secure</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -140,7 +140,7 @@ export default function Main() {
           </div>
 
            <div className="flexImg">
-            <div><img src="https://imgur.com/VD0wvI7.png" width="38px"/></div>
+            <div><img src="https://imgur.com/VD0wvI7.png" alt="GofundMe" width="38px"/></div>
             <div>
               <h5>Mobile app</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -148,7 +148,7 @@ export default function Main() {
           </div>
 
            <div className="flexImg">
-            <div><img src="https://imgur.com/qKnBv4j.png" width="38px"/></div>
+            <div><img src="https://imgur.com/qKnBv4j.png" alt="GofundMe" width="38px"/></div>
             <div>
               <h5>Social reach</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -156,7 +156,7 @@ export default function Main() {
           </div>
 
            <div className="flexImg">
-            <div><img src="https://imgur.com/oujQx2g.png" width="38px"/></div>
+            <div><img src="https://imgur.com/oujQx2g.png" alt="GofundMe" width="38px"/></div>
             <div>
               <h5>24/7 expert advice</h5>
               <p>GoFundMe is trusted around the world for its simple, reliable fundraising platform.</p>
@@ -169,14 +169,14 @@ export default function Main() {
       </SourceFund>
       <Appstore>
         <div className="play">
-          <div className="pic"><img src="https://imgur.com/4s277RZ.png" width="100%" height="100%"/></div>
+          <div className="pic"><img src="https://imgur.com/4s277RZ.png" alt="GofundMe" width="100%" height="100%"/></div>
           <div className="avaliable">
             <h3>Available now</h3>
             <h2>The GoFundMe App</h2>
             <p>Start and manage fundraisers, engage with supporters, and discover important causes — all on the go</p>
             <div className="icon">
-              <div><img src="https://imgur.com/xK3PRAX.png" width="150px" height="45px"/></div>
-              <div><img src="https://imgur.com/OTF5ymW.png" width="150px" height="45px"/></div>
+              <div><img src="https://imgur.com/xK3PRAX.png" alt="GofundMe" width="150px" height="45px"/></div>
+              <div><img src="https://imgur.com/OTF5ymW.png" alt="GofundMe" width="150px" height="45px"/></div>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function Main() {
            {/* First Div */}
           <div>
             <div>
-              <img src="https://imgur.com/1pEdm36.jpg" />
+              <img src="https://imgur.com/1pEdm36.jpg" alt="GofundMe" />
             </div>
             <div className="details">
               <span>Delhi, IN</span>
@@ -203,7 +203,7 @@ export default function Main() {
            {/* Second Div */}
            <div>
             <div>
-              <img src="https://imgur.com/x61cg2s.jpg" />
+              <img src="https://imgur.com/x61cg2s.jpg" alt="GofundMe" />
             </div>
             <div className="details">
               <span>Delhi, IN</span>
@@ -219,7 +219,7 @@ export default function Main() {
           {/* Third Div*/}
            <div>
             <div>
-              <img src="https://imgur.com/oXOPhKx.jpg" />
+              <img src="https://imgur.com/oXOPhKx.jpg" alt="GofundMe" />
             </div>
             <div className="details">
               <span>Rajasthan, IN</span>

@@ -83,7 +83,7 @@ export default function Banner() {
             </div>
             <div className="play">
               <div>
-                <img src="https://imgur.com/slBYImy.png" width="50px" onClick={openModal} />
+                <img src="https://imgur.com/slBYImy.png" width="50px" onClick={openModal} alt=""/>
                 <Modal showModal={showModal} setShowModal={setShowModal} />
 
               </div>

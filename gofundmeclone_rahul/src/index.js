@@ -4,6 +4,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import App from "./App";
 
 const rootElement = document.getElementById("root");
+/* eslint-disable no-alert, no-console */
 ReactDOM.render(
   <Router>
         <StrictMode>
@@ -12,3 +13,4 @@ ReactDOM.render(
     </Router>,
   rootElement
 );
+/* eslint-enable no-alert, no-console */

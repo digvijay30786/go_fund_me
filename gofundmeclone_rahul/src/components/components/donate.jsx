@@ -1,7 +1,7 @@
 import Menu from "./menu";
 import './donate.css';
-import { React,useRef,useState } from "react";
-import styled from "styled-components";
+import { React,useState } from "react";
+// import styled from "styled-components";
 import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
@@ -23,15 +23,15 @@ export default function Donate() {
 
     toast.configure();
 
-    const [product,setProduct] = useState({
+    const product = {
         name: form.name,
         price: payment,
         description: "Donation",
         
-    });
+    };
 
     useEffect(() => {
-        if (Object.keys(form).length == 4)
+        if (Object.keys(form).length === 4)
         {
             setDis(true);
         }
@@ -39,7 +39,7 @@ export default function Donate() {
         {
             setDis(false);
         }
-    })
+    },[form])
     
     const handlechange = (e) =>
     {
@@ -51,12 +51,12 @@ export default function Donate() {
     };
     
       async function handleToken(token, addresses) {
-          const response = await axios.post(
+          await axios.post(
               "http://localhost:3002/payment",
               { token, product }
           ).then(({ data }) => {
               console.log(data.token);
-              if (data.token.id != "") {
+              if (data.token.id !== "") {
                   toast("Success! Check email for details", { type: "success" });
                   setForm({});
                   return (<Redirect to="/your/redirect/page" />);
@@ -69,9 +69,6 @@ export default function Donate() {
               toast("Something went wrong", { type: "error" });
           });
       }
-    
-    const textInput = useRef();
- 
     
     const valid = (e) => {
         setPayment(e.target.value);
