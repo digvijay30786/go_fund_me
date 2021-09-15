@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+.center {
+  width: 30%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.stepsBar {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.stepsProgressCont {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.stepsProgressCont div {
+  margin-right: 10px;
+  width: 100px;
+  height: 6px;
+}
+.stepsProgressCont > .completed {
+  background-color: rgb(2, 169, 92) !important;
+}
+.stepsProgressCont > .not {
+  background-color: rgba(171, 190, 182, 0.685) !important;
+}
+.center form {
+  margin-top: 20px;
+}
+
+.center form label {
+  line-height: 30px;
+}
+.center form input,
+.center form select,
+.center form button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(184, 179, 179, 0.808);
+  font-size: 15px;
+  padding: 0 15px;
+}
+.center form button {
+  background-color: rgb(2, 169, 92);
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.targetMoneyInput {
+  position: relative;
+}
+.targetMoneyInput input {
+  padding-left: 35px !important;
+}
+.targetMoneyInput svg {
+  position: absolute;
+  top: 12px;
+  font-size: 25px;
+  margin-left: 5px;
+  color: gray;
+}
+
+/* /// this is image container of add photto */
+.container {
+  position: relative;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+/* ////////////////for add story textarea  */
+.addStoryTextArea {
+  resize: none;
+  padding: 10px;
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(184, 179, 179, 0.808);
+  border-radius: 5px;
+  font-size: 15px;
+}
