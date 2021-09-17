@@ -44,6 +44,13 @@ Working
 
 <img src="https://imgur.com/kAhYvXP.png"/>
 
+### Profile Page
+
+<img src="https://imgur.com/TdSiQAS.png"/>
+
+### Payment Getway :
+<img src="https://imgur.com/Nl7rrc1.png"/>
+
 ## Image, illustration source
 All images, logos and illustrations are taken from Imgur (https://imgur.com) and Flaticon (https://www.flaticon.com)
 
