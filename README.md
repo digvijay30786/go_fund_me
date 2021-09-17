@@ -29,6 +29,18 @@ Working
 4. Ad Functionality to Comment on User profile
 5. Add Popup functionality
 
+## Screenshots
+### Landing page-
+<img src="https://imgur.com/lfvAu5K.png"/>
+
+### Top Fundraisers Page : 
+
+<img src="https://imgur.com/Ru6F7v0.png"/>
+
+### Signup : 
+<img src="https://imgur.com/plA8wd1.png"/>
+
+
 ## Image, illustration source
 All images, logos and illustrations are taken from Imgur (https://imgur.com) and Flaticon (https://www.flaticon.com)
 
@@ -42,3 +54,29 @@ We Used many External Library and npm packages in our Project.
 6.react-dropzone
 7.react-spring
 8.styled-components
+
+
+## Server
+We Used Json-Server for save important Details in json file Like: Sign-up Details and Payment details so We have Use Three Two diffrent Server in this project server and start is mandatory step when we use the Clone Website.
+
+  Install JSON Server
+
+
+```bash
+npm install -g json-server
+```
+  
+ Move in Directory
+ 
+ ```bash
+path : /src/my-local-database
+```
+  
+Start the Server and Assign Port Number
+ ```bash
+json-server db.json --port 3001
+```
+ ```bash
+json-server payment.json --port 3002
+```
+
