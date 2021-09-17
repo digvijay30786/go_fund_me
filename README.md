@@ -37,9 +37,12 @@ Working
 
 <img src="https://imgur.com/Ru6F7v0.png"/>
 
-### Signup : 
+### Signup Page : 
 <img src="https://imgur.com/plA8wd1.png"/>
 
+### Fund Raising Detail page
+
+<img src="https://imgur.com/kAhYvXP.png"/>
 
 ## Image, illustration source
 All images, logos and illustrations are taken from Imgur (https://imgur.com) and Flaticon (https://www.flaticon.com)
